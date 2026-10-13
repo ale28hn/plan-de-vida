@@ -27,6 +27,24 @@ El **Examen de la noche** (gracias, luz, repaso, pedir perdón y propósito) **n
   - editor del plan, recordatorios, exportar a calendario (.ics), copia de seguridad, borrar todo.
 
 ## Textos de oración y fuentes
+
+Desde la v0.2.1 hay dos juegos de textos en español, elegibles en **Ajustes → Textos**. La estructura es siempre la regla de San Serafín.
+
+### Vaticano (católico), predeterminado
+Copiados literalmente de vatican.va (no hay textos redactados por nosotros):
+
+| Paso de la regla | Texto | Fuente |
+|---|---|---|
+| Padre Nuestro ×3 | Padre nuestro | [Compendio del Catecismo](https://www.vatican.va/archive/compendium_ccc/documents/archive_2005_compendium-ccc_sp.html) (Segunda sección) |
+| «Madre de Dios, Virgen, regocíjate» ×3 | **Ave María / Dios te salve, María**, su equivalente occidental | Compendio, Apéndice «Oraciones comunes» (misma URL) |
+| Símbolo de la Fe ×1 | Credo Niceno-Constantinopolitano, tal como se publica (incluye «y del Hijo»); la app añade una nota: el original ortodoxo no lo incluye | Compendio, Apéndice (misma URL) |
+| Oración de Jesús | «Señor Jesucristo, Hijo de Dios, ten piedad de nosotros, pecadores» (en plural, como la cita el Catecismo) | [Catecismo, n. 2667](https://www.vatican.va/archive/catechism_sp/p4s1c2a2_sp.html) |
+| «Señor, ten piedad» | Señor, ten piedad. | [Instrucción General del Misal Romano, n. 52](https://www.vatican.va/roman_curia/congregations/ccdds/documents/rc_con_ccdds_doc_20030317_ordinamento-messale_sp.html) |
+| Petición mariana después de la cena | «Santa María, Madre de Dios, ruega por nosotros, pecadores» (segunda parte del Ave María) y, en Oraciones, **Bajo tu amparo** | Compendio, Apéndice (misma URL) |
+
+Notas: el Catecismo da la Oración de Jesús en plural; la forma personal de la regla («ten piedad de mí, pecador») aparece en la explicación. En inglés la app muestra siempre los textos ortodoxos en inglés (OCA / fuente de la regla).
+
+### Ortodoxos (alternativa)
 Los textos se citan tal cual de fuentes ortodoxas en español. No hay traducciones propias.
 
 | Oración | Fuente usada |

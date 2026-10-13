@@ -68,3 +68,26 @@ export const PRAYERS = {
 };
 export const PRAYER_ORDER_SERAFIN = ['o_padrenuestro', 'o_theotokos', 'o_credo', 'o_jesus', 'o_kyrie', 'o_theotokos_salva', 'examen'];
 export const PRAYER_ORDER = ['ofrecimiento', 'angelus', 'reginacoeli', 'avemaria', 'padrenuestro', 'gloria', 'acordaos', 'examen'];
+
+// ---------------------------------------------------------------------------
+// v0.2.1 — Vatican (Catholic) Spanish texts, copied verbatim from vatican.va. Default for Spanish.
+const COMP = { label: 'Compendio del Catecismo de la Iglesia Católica (vatican.va)', url: 'https://www.vatican.va/archive/compendium_ccc/documents/archive_2005_compendium-ccc_sp.html' };
+const COMP_AP = { label: 'Compendio del Catecismo de la Iglesia Católica — Apéndice: Oraciones comunes (vatican.va)', url: COMP.url };
+const CIC = { label: 'Catecismo de la Iglesia Católica, n. 2667 (vatican.va)', url: 'https://www.vatican.va/archive/catechism_sp/p4s1c2a2_sp.html' };
+const IGMR = { label: 'Instrucción General del Misal Romano, n. 52 (vatican.va)', url: 'https://www.vatican.va/roman_curia/congregations/ccdds/documents/rc_con_ccdds_doc_20030317_ordinamento-messale_sp.html' };
+const AVE = 'Dios te salve, María, llena eres de gracia; el Señor es contigo. Bendita Tú eres entre todas las mujeres, y bendito es el fruto de tu vientre, Jesús. Santa María, Madre de Dios, ruega por nosotros, pecadores, ahora y en la hora de nuestra muerte. Amén';
+export const VATICAN_ES = {
+  o_padrenuestro: { t: 'Padre nuestro', b: 'Padre nuestro que estás en el cielo, santificado sea tu Nombre; venga a nosotros tu Reino; hágase tu voluntad en la tierra como en el cielo. Danos hoy nuestro pan de cada día; perdona nuestras ofensas, como también nosotros perdonamos a los que nos ofenden; no nos dejes caer en la tentación, y líbranos del mal. Amén.', src: COMP },
+  o_theotokos: { t: 'Ave María (Dios te salve, María)', b: AVE, src: COMP_AP, alt: 'Equivalente occidental del himno ortodoxo «Madre de Dios, Virgen, regocíjate», que pide la regla de San Serafín.' },
+  o_credo: { t: 'Credo Niceno-Constantinopolitano', b: 'Creo en un solo Dios, Padre Todopoderoso, Creador del cielo y de la tierra, de todo lo visible y lo invisible.\n\nCreo en un solo Señor, Jesucristo, Hijo único de Dios, nacido del Padre antes de todos los siglos: Dios de Dios, Luz de Luz, Dios verdadero de Dios verdadero, engendrado, no creado, de la misma naturaleza del Padre, por quien todo fue hecho; que por nosotros, los hombres, y por nuestra salvación bajó del cielo, y por obra del Espíritu Santo se encarnó de María, la Virgen, y se hizo hombre; y por nuestra causa fue crucificado en tiempos de Poncio Pilato; padeció y fue sepultado, y resucitó al tercer día, según las Escrituras, y subió al cielo, y está sentado a la derecha del Padre; y de nuevo vendrá con gloria para juzgar a vivos y muertos, y su reino no tendrá fin.\n\nCreo en el Espíritu Santo, Señor y dador de vida, que procede del Padre y del Hijo, que con el Padre y el Hijo recibe una misma adoración y gloria, y que habló por los profetas.\n\nCreo en la Iglesia, que es una, santa, católica y apostólica. Confieso que hay un solo Bautismo para el perdón de los pecados. Espero la resurrección de los muertos y la vida del mundo futuro. Amén.', src: COMP_AP, alt: 'Nota: el texto original del Credo, tal como lo reza la Iglesia ortodoxa, no incluye «y del Hijo» (filioque).' },
+  o_jesus: { t: 'Oración de Jesús', b: 'Señor Jesucristo, Hijo de Dios, ten piedad de nosotros, pecadores', src: CIC, alt: 'Así la cita el Catecismo (n. 2667). La forma personal de la regla es «…ten piedad de mí, pecador». Si hay otras personas cerca mientras trabajas, repite en silencio: «Señor, ten piedad».' },
+  o_kyrie: { t: 'Señor, ten piedad', b: 'Señor, ten piedad.', src: IGMR },
+  o_theotokos_salva: { t: 'Santa María, Madre de Dios', b: 'Santa María, Madre de Dios, ruega por nosotros, pecadores', src: COMP_AP, alt: 'Segunda parte del Ave María. Para orar más despacio, el Compendio trae también «Bajo tu amparo» (en Oraciones).' },
+  v_bajotuamparo: { t: 'Bajo tu amparo', b: 'Bajo tu amparo nos acogemos, Santa Madre de Dios; no deseches las súplicas que te dirigimos en nuestras necesidades; antes bien, líbranos siempre de todo peligro, ¡Oh Virgen gloriosa y bendita!', src: COMP_AP },
+};
+PRAYERS.v_bajotuamparo = { es: VATICAN_ES.v_bajotuamparo, en: { t: 'Beneath thy protection (Sub tuum praesidium)', b: 'Sub tuum præsidium confúgimus, sancta Dei Génetrix; nostras deprecatiónes ne despícias in necessitátibus; sed a perículis cunctis libera nos semper, Virgo gloriósa et benedícta.', src: COMP_AP, alt: 'Latin text from the same vatican.va page (no English on that page).' } };
+/** Resolve a prayer for display. texts: 'vatican' | 'orthodox'. Vatican texts replace the Spanish ones only. */
+export function getPrayer(id, lang, texts = 'vatican') {
+  if (lang === 'es' && texts === 'vatican' && VATICAN_ES[id]) return VATICAN_ES[id];
+  return PRAYERS[id]?.[lang];
+}

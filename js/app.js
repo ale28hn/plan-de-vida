@@ -1,11 +1,12 @@
 import * as D from './dates.js';
 import { STR, ITEMS } from './i18n.js';
-import { PRAYERS, PRAYER_ORDER, PRAYER_ORDER_SERAFIN } from './prayers.js';
+import { PRAYERS, PRAYER_ORDER, PRAYER_ORDER_SERAFIN, getPrayer } from './prayers.js';
+const PR = (id) => getPrayer(id, S.settings.lang, S.settings.texts || 'vatican');
 import * as R from './rule.js';
 import * as Store from './store.js';
 import { buildIcs } from './ics.js';
 
-const VERSION = '0.2.0';
+const VERSION = '0.2.1';
 let S = Store.load();
 let tab = 'today';
 const $ = (s, r = document) => r.querySelector(s);
@@ -143,7 +144,7 @@ function srcHtml(src) {
   return `<p class="text-xs opacity-55 mt-4 leading-snug">${h(T().source)}: <a class="underline" href="${h(src.url)}" target="_blank" rel="noopener">${h(src.label)}</a></p>`;
 }
 function openPrayer(pid) {
-  const p = PRAYERS[pid]?.[L()]; if (!p) return;
+  const p = PR(pid); if (!p) return;
   openSheet(`<h2 class="text-2xl font-semibold tracking-tight mb-4">${h(p.t)}</h2>
     <div class="whitespace-pre-line text-[1.05rem] leading-relaxed font-serif">${h(p.b)}</div>
     ${p.alt ? `<p class="text-sm opacity-70 mt-4">${h(p.alt)}</p>` : ''}${srcHtml(p.src)}
@@ -204,7 +205,7 @@ function openFlow(it) {
   flowState[key] ||= { step: 0, n: 0 };
   let busy = false;
   const draw = () => {
-    const st = flowState[key], cur = steps[st.step], p = PRAYERS[cur.prayer][L()];
+    const st = flowState[key], cur = steps[st.step], p = PR(cur.prayer);
     const total = R.flowTotal(steps), doneN = R.flowDoneCount(steps, st);
     openSheet(`
       <div class="flex items-center justify-between gap-2 mb-4">
@@ -242,7 +243,7 @@ function openFlow(it) {
 
 // ---------- prayer-rope counter (chotki / komboskini) ----------
 function openCounter(it) {
-  const t = T(), d = D.ymd(today()), pr = PRAYERS[it.counterPrayer || it.prayer][L()], target = it.target || 100, C = ringLen(54);
+  const t = T(), d = D.ymd(today()), pr = PR(it.counterPrayer || it.prayer), target = it.target || 100, C = ringLen(54);
   const count = () => entry(d, it.id)?.count || 0;
   const setCount = (n) => { S.log[d] ||= {}; const e = S.log[d][it.id] || {}; S.log[d][it.id] = { ...e, count: Math.max(0, n), done: e.done || n >= target, at: e.at || Date.now() }; persist(); };
   openSheet(`
@@ -384,8 +385,8 @@ function viewPrayers() {
   const t = T(), rc = D.isEasterSeason(today());
   return `<header class="mb-6"><h1 class="text-4xl font-bold tracking-tight">${t.prayersTitle}</h1></header>
     ${S.template === 'serafin' ? introCard(true) : ''}
-    <ul class="bg-base-100 rounded-3xl divide-y divide-base-300 overflow-hidden">${(S.template === 'serafin' ? PRAYER_ORDER_SERAFIN : PRAYER_ORDER).map((p) => `<li><button class="w-full text-left px-5 py-4 flex justify-between items-center active:bg-base-200" data-prayer="${p}">
-      <span class="text-[1.07rem] font-medium">${h(PRAYERS[p][L()].t)}</span><span class="opacity-40 text-sm">${(p === 'reginacoeli' && rc) || (p === 'angelus' && !rc) ? '● ' : ''}›</span></button></li>`).join('')}</ul>`;
+    <ul class="bg-base-100 rounded-3xl divide-y divide-base-300 overflow-hidden">${(S.template === 'serafin' ? (S.settings.texts || 'vatican') === 'vatican' && L() === 'es' ? [...PRAYER_ORDER_SERAFIN.slice(0, -1), 'v_bajotuamparo', 'examen'] : PRAYER_ORDER_SERAFIN : PRAYER_ORDER).map((p) => `<li><button class="w-full text-left px-5 py-4 flex justify-between items-center active:bg-base-200" data-prayer="${p}">
+      <span class="text-[1.07rem] font-medium">${h(PR(p).t)}</span><span class="opacity-40 text-sm">${(p === 'reginacoeli' && rc) || (p === 'angelus' && !rc) ? '● ' : ''}›</span></button></li>`).join('')}</ul>`;
 }
 
 function seg(name, opts, cur) {
@@ -399,6 +400,7 @@ function viewSettings() {
     ${card(t.language, seg('lang', [['es', 'Español'], ['en', 'English']], st.lang))}
     ${card(t.theme, seg('theme', [['auto', t.themeAuto], ['light', t.themeLight], ['dark', t.themeDark]], st.theme) + '<div class="h-3"></div>' + seg('accent', [['burgundy', t.accentBurgundy], ['gold', t.accentGold], ['blue', t.accentBlue]], st.accent))}
     ${card(t.template, `<div class="flex flex-col gap-2">${[['serafin', t.tplSerafin], ['catolico', t.tplCatolico]].map(([k, l]) => `<button class="btn rounded-full ${S.template === k ? 'btn-primary' : 'btn-ghost bg-base-200'}" data-tpl="${k}">${S.template === k ? '✓ ' : ''}${h(l)}</button>`).join('')}</div>`)}
+    ${card(t.textsTitle, seg('texts', [['vatican', t.textsVatican], ['orthodox', t.textsOrthodox]], st.texts || 'vatican') + `<p class="text-xs opacity-50 mt-2">${t.textsNote}</p>`)}
     ${card(t.haptic, seg('haptic', [['off', t.hapticOff], ['10', t.hapticEvery(10)], ['33', t.hapticEvery(33)], ['100', t.hapticEvery(100)]], st.haptic || '33') + `<p class="text-xs opacity-50 mt-2">${t.hapticNote}</p>`)}
     ${card(t.plan, `<ul class="divide-y divide-base-300 -mx-1">${S.items.map((it) => `<li class="flex items-center gap-3 py-2.5 px-1">
         <input type="checkbox" class="toggle toggle-primary toggle-sm" data-enable="${it.id}" ${it.enabled ? 'checked' : ''} aria-label="${t.active}">
@@ -431,11 +433,11 @@ function openEditor(id) {
         ${lab(t.targetMin, `<input id="e-min" type="number" min="0" inputmode="numeric" class="input w-full rounded-xl mt-1" value="${h(it.minutes ?? '')}">`)}
       </div>
       ${it.kind === 'counter' ? lab(t.repsTarget, `<input id="e-target" type="number" min="1" inputmode="numeric" class="input w-full rounded-xl mt-1" value="${h(it.target || 100)}">`) : ''}
-      ${it.kind === 'flow' ? `<p class="text-sm opacity-70">${t.steps}: ${(it.steps || []).map((x) => `${h(PRAYERS[x.prayer][L()].t)} ×${x.count}`).join(' · ')}</p>` : ''}
+      ${it.kind === 'flow' ? `<p class="text-sm opacity-70">${t.steps}: ${(it.steps || []).map((x) => `${h(PR(x.prayer).t)} ×${x.count}`).join(' · ')}</p>` : ''}
       ${lab(t.time, `<input id="e-time" type="time" class="input w-full rounded-xl mt-1" value="${h(it.time || '')}">`)}
       ${lab(t.frequency, `<select id="e-ftype" class="select w-full rounded-xl mt-1">${[['daily', t.fDaily], ['weekdays', t.fWeekdays], ['weekly', t.fWeekly], ['monthly', t.fMonthly]].map(([v, l]) => opt(v, l, f.type)).join('')}</select>`)}
       <div id="e-fx"></div>
-      ${lab(t.prayerLink, `<select id="e-prayer" class="select w-full rounded-xl mt-1">${opt('', '—', it.prayer || '')}${[...PRAYER_ORDER_SERAFIN, ...PRAYER_ORDER.filter((x) => x !== 'examen')].map((p) => opt(p, PRAYERS[p][L()].t, it.prayer || '')).join('')}</select>`)}
+      ${lab(t.prayerLink, `<select id="e-prayer" class="select w-full rounded-xl mt-1">${opt('', '—', it.prayer || '')}${[...PRAYER_ORDER_SERAFIN, ...PRAYER_ORDER.filter((x) => x !== 'examen')].map((p) => opt(p, PR(p).t, it.prayer || '')).join('')}</select>`)}
     </div>
     <div class="modal-action">${!isNew ? `<button class="btn btn-ghost text-error rounded-full mr-auto" data-del>${t.deleteItem}</button>` : ''}
       <button class="btn btn-ghost rounded-full" data-close>${t.cancel}</button><button class="btn btn-primary rounded-full px-6" data-save>${t.save}</button></div>`, (r) => {
@@ -572,7 +574,7 @@ if (!SHOT && new URLSearchParams(location.search).has('smoke')) {
     step(`${lang}/jesus counter`, () => { const c0 = entry(D.ymd(today()), 's_dia')?.count || 0; openItem('s_dia'); tapN('#bead', 12); $('[data-minus]').click(); if (entry(D.ymd(today()), 's_dia').count !== c0 + 11) throw new Error('count'); $('[data-close]').click(); });
     step(`${lang}/theotokos counter`, () => { openItem('s_cena'); tapN('#bead', 3); $('[data-close]').click(); });
     step(`${lang}/examen`, () => { openExamen(); for (let i = 0; i < 5; i++) { const ta = $('#ex-in'); if (ta) ta.value = 'x'; $('[data-next]').click(); } });
-    step(`${lang}/prayers`, () => { for (const p of [...PRAYER_ORDER_SERAFIN, ...PRAYER_ORDER]) openPrayer(p); closeSheet(); });
+    step(`${lang}/prayers`, () => { for (const p of [...PRAYER_ORDER_SERAFIN, ...PRAYER_ORDER]) openPrayer(p); for (const tx of ['orthodox', 'vatican']) { S.settings.texts = tx; for (const p of PRAYER_ORDER_SERAFIN) openPrayer(p); openPrayer('v_bajotuamparo'); tab = 'prayers'; render(); tab = 'settings'; render(); } closeSheet(); });
     step(`${lang}/editor`, () => { openEditor('s_dia'); $('#e-target').value = '33'; $('[data-save]').click(); if (S.items.find((i) => i.id === 's_dia').target !== 33) throw new Error('target'); openEditor(null); $('#e-name').value = 'Oración con los niños'; $('[data-save]').click(); });
     step(`${lang}/ics`, () => { if (!buildIcs(S.items.map((i) => ({ ...i, title: itemName(i) }))).includes('RRULE')) throw new Error('no rrule'); });
     step(`${lang}/week-after`, () => { tab = 'week'; render(); });

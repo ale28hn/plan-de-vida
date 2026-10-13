@@ -1,5 +1,6 @@
 export const STR = {
   es: {
+    textsTitle: 'Textos', textsVatican: 'Vaticano (católico)', textsOrthodox: 'Ortodoxos', textsNote: 'La estructura sigue la regla de San Serafín. «Vaticano» usa los textos oficiales en español de vatican.va; «Ortodoxos», los de libros de oraciones ortodoxos. (En inglés se muestran siempre los textos ortodoxos.)',
     appName: 'Plan de Vida', tabToday: 'Hoy', tabWeek: 'Semana', tabPrayers: 'Oraciones', tabSettings: 'Ajustes',
     slots: { morning: 'Mañana', day: 'Durante el día', noon: 'Mediodía', afternoon: 'Tarde', night: 'Noche', any: 'Cualquier hora' },
     weekdaysShort: ['D', 'L', 'M', 'X', 'J', 'V', 'S'], weekdays: ['Domingo', 'Lunes', 'Martes', 'Miércoles', 'Jueves', 'Viernes', 'Sábado'],
@@ -41,10 +42,11 @@ export const STR = {
     tapToCount: 'Toca para contar', tapAnywhere: 'Toca la oración para contar', ruleDone: 'Regla completa. Gloria a Dios.', crossNote: 'Santíguate y ve a descansar.',
     source: 'Fuente', alt: 'Nota', count: 'Cuenta', target: 'Meta', finish2: 'Terminar', repsTarget: 'Repeticiones objetivo (contador)', steps: 'Pasos',
     introTitle: 'Regla de San Serafín de Sarov',
-    intro: 'Regla breve de san Serafín de Sarov (†1833) para quienes viven ocupados con el trabajo: al levantarse, el Padre Nuestro tres veces, «Madre de Dios, Virgen, regocíjate» tres veces y el Símbolo de la Fe una vez; durante el trabajo o de viaje, la Oración de Jesús (o «Señor, ten piedad» si hay gente cerca) hasta la cena; después de la cena, «Santísima Madre de Dios, sálvame a mí pecador» hasta dormirse; y al acostarse, otra vez la regla de la mañana y la señal de la Cruz.',
+    intro: 'Regla breve de san Serafín de Sarov (†1833) para quienes viven ocupados con el trabajo: al levantarse, el Padre Nuestro tres veces, «Madre de Dios, Virgen, regocíjate» (en Occidente, el Ave María) tres veces y el Símbolo de la Fe una vez; durante el trabajo o de viaje, la Oración de Jesús (o «Señor, ten piedad» si hay gente cerca) hasta la cena; después de la cena, «Santísima Madre de Dios, sálvame a mí pecador» hasta dormirse; y al acostarse, otra vez la regla de la mañana y la señal de la Cruz.',
     introSrc: 'Según «Prayer Rule of St Seraphim for daily use», Orthodox Church Sheffield', bead: 'cuenta', of: 'de',
   },
   en: {
+    textsTitle: 'Texts', textsVatican: 'Vatican (Catholic)', textsOrthodox: 'Orthodox', textsNote: 'The structure follows St Seraphim\'s rule. "Vatican" uses the official Spanish texts from vatican.va; "Orthodox" uses Orthodox prayer books. (English always shows the Orthodox English texts.)',
     appName: 'Plan of Life', tabToday: 'Today', tabWeek: 'Week', tabPrayers: 'Prayers', tabSettings: 'Settings',
     slots: { morning: 'Morning', day: 'During the day', noon: 'Midday', afternoon: 'Afternoon', night: 'Night', any: 'Any time' },
     weekdaysShort: ['S', 'M', 'T', 'W', 'T', 'F', 'S'], weekdays: ['Sunday', 'Monday', 'Tuesday', 'Wednesday', 'Thursday', 'Friday', 'Saturday'],

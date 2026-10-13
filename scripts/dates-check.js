@@ -1,7 +1,7 @@
 import * as D from '../js/dates.js';
 import * as R from '../js/rule.js';
 import { seedSerafin, SEEDS } from '../js/store.js';
-import { PRAYERS } from '../js/prayers.js';
+import { PRAYERS, getPrayer, VATICAN_ES } from '../js/prayers.js';
 let pass = 0, fail = 0;
 const eq = (name, got, exp) => { const ok = JSON.stringify(got) === JSON.stringify(exp); ok ? pass++ : fail++; console.log(`${ok ? '✓' : '✗'} ${name}${ok ? '' : `  got ${JSON.stringify(got)} expected ${JSON.stringify(exp)}`}`); };
 const P = D.parseYmd;
@@ -75,5 +75,15 @@ eq('switch → catolico items', s1.items.some((i) => i.key === 'rosario'), true)
 eq('switch keeps log + examen', [s1.log, s1.examen], [s0.log, s0.examen]);
 const s2 = R.switchTemplate(s1, 'serafin', SEEDS);
 eq('switch back restores same plan object', s2.items, sf);
+// v0.2.1 — Vatican texts (default) vs Orthodox
+const allVat = Object.values(VATICAN_ES).every((p) => p.src && p.src.url.startsWith('https://www.vatican.va/'));
+eq('vatican: every text cites a vatican.va URL', allVat, true);
+eq('vatican default: Theotokos step → Ave María', getPrayer('o_theotokos', 'es').b.startsWith('Dios te salve, María'), true);
+eq('vatican Credo keeps «y del Hijo» + note', getPrayer('o_credo', 'es').b.includes('procede del Padre y del Hijo') && /filioque/.test(getPrayer('o_credo', 'es').alt), true);
+eq('vatican Jesus prayer = CIC 2667 wording', getPrayer('o_jesus', 'es').b, 'Señor Jesucristo, Hijo de Dios, ten piedad de nosotros, pecadores');
+eq('orthodox Credo has no filioque', getPrayer('o_credo', 'es', 'orthodox').b.includes('y del Hijo'), false);
+eq('orthodox Theotokos hymn selectable', getPrayer('o_theotokos', 'es', 'orthodox').b.startsWith('¡Madre de Dios, Virgen, regocíjate!'), true);
+eq('english unaffected by texts setting', getPrayer('o_credo', 'en', 'vatican').b === PRAYERS.o_credo.en.b, true);
+eq('all seraphim step prayers resolve in both text sets', ['o_padrenuestro', 'o_theotokos', 'o_credo', 'o_jesus', 'o_kyrie', 'o_theotokos_salva'].every((id) => getPrayer(id, 'es', 'vatican')?.b && getPrayer(id, 'es', 'orthodox')?.b), true);
 console.log(`\n${pass} passed, ${fail} failed`);
 process.exit(fail ? 1 : 0);

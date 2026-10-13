@@ -30,10 +30,10 @@ export const seedSerafin = () => [
 export const SEEDS = { serafin: seedSerafin, catolico: seedCatolico };
 export const seedItems = seedSerafin;
 
-export const fresh = () => ({ version: 1, settings: { lang: 'es', theme: 'auto', accent: 'burgundy', notif: false, haptic: '33' }, template: 'serafin', createdAt: ymd(new Date()), items: seedItems(), log: {}, examen: {} });
+export const fresh = () => ({ version: 1, settings: { lang: 'es', theme: 'auto', accent: 'burgundy', notif: false, haptic: '33', texts: 'vatican' }, template: 'serafin', createdAt: ymd(new Date()), items: seedItems(), log: {}, examen: {} });
 
 export function load() {
-  try { const s = JSON.parse(localStorage.getItem(KEY)); if (s && s.version === 1 && Array.isArray(s.items)) { s.createdAt ||= ymd(new Date()); s.template ||= 'catolico'; s.settings.haptic ||= '33'; return s; /* v0.1 data was the Catholic plan: keep it, user can switch */ } } catch {}
+  try { const s = JSON.parse(localStorage.getItem(KEY)); if (s && s.version === 1 && Array.isArray(s.items)) { s.createdAt ||= ymd(new Date()); s.template ||= 'catolico'; s.settings.haptic ||= '33'; s.settings.texts ||= 'vatican'; return s; /* v0.1 data was the Catholic plan: keep it, user can switch */ } } catch {}
   return fresh();
 }
 export const save = (s) => localStorage.setItem(KEY, JSON.stringify(s));

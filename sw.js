@@ -1,5 +1,5 @@
 // Plan de Vida service worker — cache-first app shell, fully offline.
-const CACHE = 'plandevida-v0.2.0';
+const CACHE = 'plandevida-v0.2.1';
 const ASSETS = ['./', './index.html', './manifest.webmanifest', './css/app.built.css', './js/app.js', './js/dates.js', './js/i18n.js',
   './js/prayers.js', './js/store.js', './js/ics.js', './js/rule.js', './icons/icon.svg', './icons/icon-180.png', './icons/icon-192.png', './icons/icon-512.png'];
 self.addEventListener('install', (e) => { e.waitUntil(caches.open(CACHE).then((c) => c.addAll(ASSETS))); self.skipWaiting(); });
