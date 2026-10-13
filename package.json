@@ -1,0 +1,19 @@
+{
+  "name": "plan-de-vida",
+  "version": "0.2.0",
+  "private": true,
+  "type": "module",
+  "description": "Plan de Vida — app personal de piedad, offline-first PWA",
+  "scripts": {
+    "serve": "python3 -m http.server 8790 --bind 127.0.0.1",
+    "check": "node scripts/dates-check.js",
+    "build:css": "tailwindcss -i css/app.src.css -o css/app.built.css --minify",
+    "smoke": "node scripts/smoke.js",
+    "shots": "node --experimental-websocket scripts/shot.js"
+  },
+  "devDependencies": {
+    "@tailwindcss/cli": "^4.3.3",
+    "daisyui": "^5.7.47",
+    "tailwindcss": "^4.3.3"
+  }
+}

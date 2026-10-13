@@ -1,0 +1,44 @@
+/* Plan de Vida — Tailwind 4 + DaisyUI 5 source.
+   Rebuild: npm run build:css → css/app.built.css (committed; works offline, no CDN). */
+@import "tailwindcss" source(none);
+@source "../index.html";
+@source "../js";
+
+@plugin "daisyui" { themes: false; logs: false; }
+
+@plugin "daisyui/theme" {
+  name: "pdv-light"; default: true; color-scheme: light;
+  --color-base-100: #ffffff; --color-base-200: #f5f4f1; --color-base-300: #e7e5e0; --color-base-content: #1c1d21;
+  --color-primary: #2f4a7a; --color-primary-content: #ffffff;
+  --color-secondary: #b08a3e; --color-secondary-content: #ffffff;
+  --color-accent: #2f4a7a; --color-accent-content: #ffffff;
+  --color-neutral: #1c1d21; --color-neutral-content: #f5f4f1;
+  --color-info: #5b6b85; --color-info-content: #fff; --color-success: #4f7a5a; --color-success-content: #fff;
+  --color-warning: #b08a3e; --color-warning-content: #fff; --color-error: #b0473e; --color-error-content: #fff;
+  --radius-selector: 1rem; --radius-field: 0.9rem; --radius-box: 1.5rem; --border: 1px; --depth: 0; --noise: 0;
+}
+@plugin "daisyui/theme" {
+  name: "pdv-dark"; prefersdark: false; color-scheme: dark;
+  --color-base-100: #1b1d22; --color-base-200: #121418; --color-base-300: #2a2d34; --color-base-content: #e9e7e2;
+  --color-primary: #8fa9d8; --color-primary-content: #101522;
+  --color-secondary: #d4b06a; --color-secondary-content: #1a1408;
+  --color-accent: #8fa9d8; --color-accent-content: #101522;
+  --color-neutral: #e9e7e2; --color-neutral-content: #121418;
+  --color-info: #8fa0bd; --color-info-content: #111; --color-success: #8bb596; --color-success-content: #111;
+  --color-warning: #d4b06a; --color-warning-content: #111; --color-error: #e08a80; --color-error-content: #111;
+  --radius-selector: 1rem; --radius-field: 0.9rem; --radius-box: 1.5rem; --border: 1px; --depth: 0; --noise: 0;
+}
+/* Warm gold accent option */
+[data-accent="gold"][data-theme="pdv-light"] { --color-primary: #9a7533; --color-accent: #9a7533; }
+[data-accent="gold"][data-theme="pdv-dark"] { --color-primary: #d4b06a; --color-primary-content: #1a1408; --color-accent: #d4b06a; }
+
+@theme { --font-sans: -apple-system, BlinkMacSystemFont, "SF Pro Text", "Segoe UI", Roboto, "Helvetica Neue", sans-serif;
+  --font-serif: "New York", "Iowan Old Style", Georgia, "Times New Roman", serif; }
+html { -webkit-tap-highlight-color: transparent; }
+body { font-family: var(--font-sans); }
+button { touch-action: manipulation; }
+.check:active span { transform: scale(.9); }
+/* Burgundy (icon-red) accent */
+[data-accent="burgundy"][data-theme="pdv-light"] { --color-primary: #7a2834; --color-primary-content: #fff; --color-accent: #7a2834; }
+[data-accent="burgundy"][data-theme="pdv-dark"] { --color-primary: #d9939b; --color-primary-content: #24090d; --color-accent: #d9939b; }
+.noanim *, .noanim *::before, .noanim *::after, .noanim ::backdrop { transition: none !important; animation: none !important; }
