@@ -894,7 +894,7 @@ export default {
       "feast": "Del Martirologio"
     },
     "06-26": {
-      "name": "San Josemaría Escrivá, presbítero",
+      "name": "San Juan de Perugia y san Pedro de Sassoferrato, mártires",
       "rank": "feria",
       "feast": "Del Martirologio"
     },
