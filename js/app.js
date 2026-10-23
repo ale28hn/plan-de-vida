@@ -7,7 +7,7 @@ import * as Store from './store.js';
 import { buildIcs } from './ics.js';
 import * as Daily from './daily.js';
 
-const VERSION = '0.2.2';
+const VERSION = '0.2.3';
 let S = Store.load();
 let tab = 'today';
 const $ = (s, r = document) => r.querySelector(s);
@@ -325,6 +325,19 @@ function dailyCard(d = today()) {
   const t = T(), saint = Daily.saintOf(d), phil = Daily.philokaliaOf(d);
   if (!saint && !phil) return '';
   const rank = saint ? (saint.feast || rankLabel(saint.rank)) : '';
+  const philBlock = phil ? (() => {
+    const verse = phil.verse || '';
+    const isTheme = phil.verseKind === 'theme';
+    const attr = [phil.author, phil.work, phil.section].filter(Boolean).join(' · ');
+    return `<div>
+      <p class="text-xs uppercase tracking-wider opacity-50 font-semibold">${h(t.philokaliaTitle)}</p>
+      ${verse ? `<p class="mt-2 font-serif text-[1.15rem] leading-relaxed">${h(verse)}</p>` : ''}
+      ${attr ? `<p class="mt-3 text-sm opacity-60 leading-snug">${h(attr)}</p>` : ''}
+      ${isTheme ? `<p class="text-xs opacity-45 mt-1">${h(t.philokaliaThemeNote)}</p>` : ''}
+      ${phil.invite ? `<p class="mt-2 text-sm leading-relaxed opacity-75 italic">${h(phil.invite)}</p>` : ''}
+      <p class="text-xs opacity-40 mt-2">${h(t.philokaliaAttr)}</p>
+    </div>`;
+  })() : '';
   return `<section class="rounded-3xl bg-base-100 px-5 py-4 mb-6 border border-base-300/80" aria-label="${h(t.saintOfDay)}">
     ${saint ? `<div class="mb-3">
       <p class="text-xs uppercase tracking-wider opacity-50 font-semibold">${h(t.saintOfDay)}</p>
@@ -332,13 +345,7 @@ function dailyCard(d = today()) {
       ${rank ? `<p class="text-sm opacity-55 mt-0.5">${h(rank)}</p>` : ''}
     </div>` : ''}
     ${saint && phil ? '<div class="border-t border-base-300 my-3"></div>' : ''}
-    ${phil ? `<div>
-      <p class="text-xs uppercase tracking-wider opacity-50 font-semibold">${h(t.philokaliaTitle)}</p>
-      <p class="mt-1 text-[1.05rem] font-medium leading-snug">${h(phil.author)}</p>
-      <p class="text-sm opacity-70 mt-0.5 leading-snug">${h(phil.work)} · ${h(phil.section)}</p>
-      <p class="mt-2 text-sm leading-relaxed opacity-80 italic">${h(phil.invite)}</p>
-      <p class="text-xs opacity-40 mt-2">${h(t.philokaliaAttr)}</p>
-    </div>` : ''}
+    ${philBlock}
   </section>`;
 }
 
@@ -591,7 +598,7 @@ if (!SHOT && new URLSearchParams(location.search).has('smoke')) {
   const tapN = (sel, n) => { for (let i = 0; i < n; i++) $(sel).click(); };
   step('daily saint+philokalia', () => {
     const s = Daily.saintOf(today()), p = Daily.philokaliaOf(today());
-    if (!s?.name || !p?.author) throw new Error('daily missing');
+    if (!s?.name || !p?.author || !p?.verse) throw new Error('daily missing');
     tab = 'today'; render();
     if (!$('#view').textContent.includes(s.name.split(',')[0].slice(0, 12))) throw new Error('saint not rendered');
   });

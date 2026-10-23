@@ -1,5 +1,5 @@
 // Plan de Vida service worker — cache-first app shell, fully offline.
-const CACHE = 'plandevida-v0.2.2';
+const CACHE = 'plandevida-v0.2.3';
 const ASSETS = ['./', './index.html', './manifest.webmanifest', './css/app.built.css', './js/app.js', './js/dates.js', './js/i18n.js',
   './js/prayers.js', './js/store.js', './js/ics.js', './js/rule.js', './js/daily.js', './js/data-saints.js', './js/data-philokalia.js',
   './data/saints.json', './data/philokalia.json',
