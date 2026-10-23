@@ -1,0 +1,1842 @@
+// Auto-generated offline data. Source: ../data/saints.json
+export default {
+  "meta": {
+    "title": "Santo del día (Calendario Romano General, fiestas fijas)",
+    "lang": "es",
+    "source": "Calendario Romano General (post-1969) y nombres del Martirologio Romano para días sin memoria propia. Datos de calendario litúrgico (hechos públicos); no es el Ordo oficial de una diócesis.",
+    "limitations": "v1: solo fiestas fijas por mes-día. No calcula fiestas móviles (Pascua, Ascensión, Pentecostés, Corpus, Sagrado Corazón, etc.) ni traslados dominicales. Epifanía y Ascensión siguen la fecha fija universal aquí.",
+    "updated": "2026-10-22"
+  },
+  "byMonthDay": {
+    "01-01": {
+      "name": "Santa María, Madre de Dios",
+      "rank": "solemnity",
+      "feast": "Solemnidad"
+    },
+    "01-02": {
+      "name": "Santos Basilio Magno y Gregorio Nacianceno, obispos y doctores de la Iglesia",
+      "rank": "memorial",
+      "feast": "Memoria"
+    },
+    "01-03": {
+      "name": "Santísimo Nombre de Jesús",
+      "rank": "optional",
+      "feast": "Memoria libre"
+    },
+    "01-04": {
+      "name": "San Gregorio de Langres",
+      "rank": "feria",
+      "feast": "Del Martirologio"
+    },
+    "01-05": {
+      "name": "San Telésforo, papa y mártir",
+      "rank": "feria",
+      "feast": "Del Martirologio"
+    },
+    "01-06": {
+      "name": "Epifanía del Señor",
+      "rank": "solemnity",
+      "feast": "Solemnidad (en muchos lugares, el domingo)"
+    },
+    "01-07": {
+      "name": "San Raimundo de Peñafort, presbítero",
+      "rank": "optional",
+      "feast": "Memoria libre"
+    },
+    "01-08": {
+      "name": "San Severino",
+      "rank": "feria",
+      "feast": "Del Martirologio"
+    },
+    "01-09": {
+      "name": "San Julián y santa Basilisa, mártires",
+      "rank": "feria",
+      "feast": "Del Martirologio"
+    },
+    "01-10": {
+      "name": "San Gregorio de Nisa, obispo",
+      "rank": "feria",
+      "feast": "Del Martirologio"
+    },
+    "01-11": {
+      "name": "San Higinio, papa",
+      "rank": "feria",
+      "feast": "Del Martirologio"
+    },
+    "01-12": {
+      "name": "San Benito Biscop, abad",
+      "rank": "feria",
+      "feast": "Del Martirologio"
+    },
+    "01-13": {
+      "name": "San Hilario, obispo y doctor de la Iglesia",
+      "rank": "optional",
+      "feast": "Memoria libre"
+    },
+    "01-14": {
+      "name": "San Félix de Nola",
+      "rank": "feria",
+      "feast": "Del Martirologio"
+    },
+    "01-15": {
+      "name": "San Pablo, el primer ermitaño",
+      "rank": "feria",
+      "feast": "Del Martirologio"
+    },
+    "01-16": {
+      "name": "San Marcelo I, papa y mártir",
+      "rank": "feria",
+      "feast": "Del Martirologio"
+    },
+    "01-17": {
+      "name": "San Antonio, abad",
+      "rank": "memorial",
+      "feast": "Memoria"
+    },
+    "01-18": {
+      "name": "Santa Prisca, mártir",
+      "rank": "feria",
+      "feast": "Del Martirologio"
+    },
+    "01-19": {
+      "name": "Santos Mario, Marta, Audifax y Abacuc, mártires",
+      "rank": "feria",
+      "feast": "Del Martirologio"
+    },
+    "01-20": {
+      "name": "San Fabián, papa y mártir; san Sebastián, mártir",
+      "rank": "optional",
+      "feast": "Memoria libre"
+    },
+    "01-21": {
+      "name": "Santa Inés, virgen y mártir",
+      "rank": "memorial",
+      "feast": "Memoria"
+    },
+    "01-22": {
+      "name": "San Vicente, diácono y mártir",
+      "rank": "optional",
+      "feast": "Memoria libre"
+    },
+    "01-23": {
+      "name": "San Ildefonso de Toledo, obispo",
+      "rank": "feria",
+      "feast": "Del Martirologio"
+    },
+    "01-24": {
+      "name": "San Francisco de Sales, obispo y doctor de la Iglesia",
+      "rank": "memorial",
+      "feast": "Memoria"
+    },
+    "01-25": {
+      "name": "Conversión de san Pablo, apóstol",
+      "rank": "feast",
+      "feast": "Fiesta"
+    },
+    "01-26": {
+      "name": "Santos Timoteo y Tito, obispos",
+      "rank": "memorial",
+      "feast": "Memoria"
+    },
+    "01-27": {
+      "name": "Santa Ángela de Mérici, virgen",
+      "rank": "optional",
+      "feast": "Memoria libre"
+    },
+    "01-28": {
+      "name": "Santo Tomás de Aquino, presbítero y doctor de la Iglesia",
+      "rank": "memorial",
+      "feast": "Memoria"
+    },
+    "01-29": {
+      "name": "San Constancio",
+      "rank": "feria",
+      "feast": "Del Martirologio"
+    },
+    "01-30": {
+      "name": "Santa Martina, virgen y mártir",
+      "rank": "feria",
+      "feast": "Del Martirologio"
+    },
+    "01-31": {
+      "name": "San Juan Bosco, presbítero",
+      "rank": "memorial",
+      "feast": "Memoria"
+    },
+    "02-01": {
+      "name": "San Brígido de Kildare, abadesa",
+      "rank": "feria",
+      "feast": "Del Martirologio"
+    },
+    "02-02": {
+      "name": "Presentación del Señor",
+      "rank": "feast",
+      "feast": "Fiesta"
+    },
+    "02-03": {
+      "name": "San Blas, obispo y mártir; san Anscario, obispo",
+      "rank": "optional",
+      "feast": "Memoria libre"
+    },
+    "02-04": {
+      "name": "San Juan de Brito, presbítero y mártir",
+      "rank": "feria",
+      "feast": "Del Martirologio"
+    },
+    "02-05": {
+      "name": "Santa Águeda, virgen y mártir",
+      "rank": "memorial",
+      "feast": "Memoria"
+    },
+    "02-06": {
+      "name": "Santos Pablo Miki y compañeros, mártires",
+      "rank": "memorial",
+      "feast": "Memoria"
+    },
+    "02-07": {
+      "name": "San Colemán de Lismore",
+      "rank": "feria",
+      "feast": "Del Martirologio"
+    },
+    "02-08": {
+      "name": "San Jerónimo Emiliani; santa Josefina Bakhita, virgen",
+      "rank": "optional",
+      "feast": "Memoria libre"
+    },
+    "02-09": {
+      "name": "Santa Apolonia, virgen y mártir",
+      "rank": "feria",
+      "feast": "Del Martirologio"
+    },
+    "02-10": {
+      "name": "Santa Escolástica, virgen",
+      "rank": "memorial",
+      "feast": "Memoria"
+    },
+    "02-11": {
+      "name": "Nuestra Señora de Lourdes",
+      "rank": "optional",
+      "feast": "Memoria libre"
+    },
+    "02-12": {
+      "name": "Santos Siete Fundadores (traslado) / san Julián el Hospitalario",
+      "rank": "feria",
+      "feast": "Del Martirologio"
+    },
+    "02-13": {
+      "name": "San Benigno de Todi",
+      "rank": "feria",
+      "feast": "Del Martirologio"
+    },
+    "02-14": {
+      "name": "Santos Cirilo, monje, y Metodio, obispo",
+      "rank": "memorial",
+      "feast": "Memoria"
+    },
+    "02-15": {
+      "name": "Santos Faustino y Jovita, mártires",
+      "rank": "feria",
+      "feast": "Del Martirologio"
+    },
+    "02-16": {
+      "name": "Santa Juliana, virgen y mártir",
+      "rank": "feria",
+      "feast": "Del Martirologio"
+    },
+    "02-17": {
+      "name": "Los Siete Santos Fundadores de la Orden de los Siervos de la Bienaventurada Virgen María",
+      "rank": "optional",
+      "feast": "Memoria libre"
+    },
+    "02-18": {
+      "name": "San Simeón, obispo y mártir",
+      "rank": "feria",
+      "feast": "Del Martirologio"
+    },
+    "02-19": {
+      "name": "San Conrado de Piacenza",
+      "rank": "feria",
+      "feast": "Del Martirologio"
+    },
+    "02-20": {
+      "name": "Santos Francisco y Jacinta Marto",
+      "rank": "feria",
+      "feast": "Del Martirologio"
+    },
+    "02-21": {
+      "name": "San Pedro Damiani, obispo y doctor de la Iglesia",
+      "rank": "optional",
+      "feast": "Memoria libre"
+    },
+    "02-22": {
+      "name": "Cátedra de san Pedro, apóstol",
+      "rank": "feast",
+      "feast": "Fiesta"
+    },
+    "02-23": {
+      "name": "San Policarpo, obispo y mártir",
+      "rank": "memorial",
+      "feast": "Memoria"
+    },
+    "02-24": {
+      "name": "San Sergio",
+      "rank": "feria",
+      "feast": "Del Martirologio"
+    },
+    "02-25": {
+      "name": "San Walburga, abadesa",
+      "rank": "feria",
+      "feast": "Del Martirologio"
+    },
+    "02-26": {
+      "name": "San Porfirio de Gaza, obispo",
+      "rank": "feria",
+      "feast": "Del Martirologio"
+    },
+    "02-27": {
+      "name": "San Gregorio de Narek, abad y doctor de la Iglesia",
+      "rank": "optional",
+      "feast": "Memoria libre"
+    },
+    "02-28": {
+      "name": "San Román de Condat",
+      "rank": "feria",
+      "feast": "Del Martirologio"
+    },
+    "02-29": {
+      "name": "San Oswald de Worcester",
+      "rank": "feria",
+      "feast": "Del Martirologio"
+    },
+    "03-01": {
+      "name": "San David de Gales, obispo",
+      "rank": "feria",
+      "feast": "Del Martirologio"
+    },
+    "03-02": {
+      "name": "San Simplicio, papa",
+      "rank": "feria",
+      "feast": "Del Martirologio"
+    },
+    "03-03": {
+      "name": "Santos Emeterio y Celedonio, mártires",
+      "rank": "feria",
+      "feast": "Del Martirologio"
+    },
+    "03-04": {
+      "name": "San Casimiro",
+      "rank": "optional",
+      "feast": "Memoria libre"
+    },
+    "03-05": {
+      "name": "San Juan José de la Cruz",
+      "rank": "feria",
+      "feast": "Del Martirologio"
+    },
+    "03-06": {
+      "name": "Santa Coleta, virgen",
+      "rank": "feria",
+      "feast": "Del Martirologio"
+    },
+    "03-07": {
+      "name": "Santas Perpetua y Felicidad, mártires",
+      "rank": "memorial",
+      "feast": "Memoria"
+    },
+    "03-08": {
+      "name": "San Juan de Dios, religioso",
+      "rank": "optional",
+      "feast": "Memoria libre"
+    },
+    "03-09": {
+      "name": "Santa Francisca Romana, religiosa",
+      "rank": "optional",
+      "feast": "Memoria libre"
+    },
+    "03-10": {
+      "name": "Los Cuarenta Mártires de Sebaste",
+      "rank": "feria",
+      "feast": "Del Martirologio"
+    },
+    "03-11": {
+      "name": "San Eulogio de Córdoba, presbítero y mártir",
+      "rank": "feria",
+      "feast": "Del Martirologio"
+    },
+    "03-12": {
+      "name": "San Máximo de Turín, obispo",
+      "rank": "feria",
+      "feast": "Del Martirologio"
+    },
+    "03-13": {
+      "name": "Santa Eufrasia",
+      "rank": "feria",
+      "feast": "Del Martirologio"
+    },
+    "03-14": {
+      "name": "Santa Matilde",
+      "rank": "feria",
+      "feast": "Del Martirologio"
+    },
+    "03-15": {
+      "name": "Santa Luisa de Marillac, religiosa",
+      "rank": "feria",
+      "feast": "Del Martirologio"
+    },
+    "03-16": {
+      "name": "San Heriberto de Colonia, obispo",
+      "rank": "feria",
+      "feast": "Del Martirologio"
+    },
+    "03-17": {
+      "name": "San Patricio, obispo",
+      "rank": "optional",
+      "feast": "Memoria libre"
+    },
+    "03-18": {
+      "name": "San Cirilo de Jerusalén, obispo y doctor de la Iglesia",
+      "rank": "optional",
+      "feast": "Memoria libre"
+    },
+    "03-19": {
+      "name": "San José, esposo de la Virgen María",
+      "rank": "solemnity",
+      "feast": "Solemnidad"
+    },
+    "03-20": {
+      "name": "San Wulfrano, obispo",
+      "rank": "feria",
+      "feast": "Del Martirologio"
+    },
+    "03-21": {
+      "name": "San Nicolás de Flüe",
+      "rank": "feria",
+      "feast": "Del Martirologio"
+    },
+    "03-22": {
+      "name": "San Leaón de Sens",
+      "rank": "feria",
+      "feast": "Del Martirologio"
+    },
+    "03-23": {
+      "name": "San Turibio de Mogrovejo, obispo",
+      "rank": "optional",
+      "feast": "Memoria libre"
+    },
+    "03-24": {
+      "name": "San Óscar Romero, obispo y mártir",
+      "rank": "feria",
+      "feast": "Del Martirologio"
+    },
+    "03-25": {
+      "name": "Anunciación del Señor",
+      "rank": "solemnity",
+      "feast": "Solemnidad"
+    },
+    "03-26": {
+      "name": "San Ludgero, obispo",
+      "rank": "feria",
+      "feast": "Del Martirologio"
+    },
+    "03-27": {
+      "name": "San Ruperto de Salzburgo, obispo",
+      "rank": "feria",
+      "feast": "Del Martirologio"
+    },
+    "03-28": {
+      "name": "San Sixto III, papa",
+      "rank": "feria",
+      "feast": "Del Martirologio"
+    },
+    "03-29": {
+      "name": "San Bertoldo",
+      "rank": "feria",
+      "feast": "Del Martirologio"
+    },
+    "03-30": {
+      "name": "San Juan Climaco, abad",
+      "rank": "feria",
+      "feast": "Del Martirologio"
+    },
+    "03-31": {
+      "name": "San Benjamín, diácono y mártir",
+      "rank": "feria",
+      "feast": "Del Martirologio"
+    },
+    "04-01": {
+      "name": "San Hugo de Grenoble, obispo",
+      "rank": "feria",
+      "feast": "Del Martirologio"
+    },
+    "04-02": {
+      "name": "San Francisco de Paula, ermitaño",
+      "rank": "optional",
+      "feast": "Memoria libre"
+    },
+    "04-03": {
+      "name": "San Ricardo de Chichester, obispo",
+      "rank": "feria",
+      "feast": "Del Martirologio"
+    },
+    "04-04": {
+      "name": "San Isidoro, obispo y doctor de la Iglesia",
+      "rank": "optional",
+      "feast": "Memoria libre"
+    },
+    "04-05": {
+      "name": "San Vicente Ferrer, presbítero",
+      "rank": "optional",
+      "feast": "Memoria libre"
+    },
+    "04-06": {
+      "name": "San Guillermo de Eskil",
+      "rank": "feria",
+      "feast": "Del Martirologio"
+    },
+    "04-07": {
+      "name": "San Juan Bautista de la Salle, presbítero",
+      "rank": "memorial",
+      "feast": "Memoria"
+    },
+    "04-08": {
+      "name": "San Dionisio de Corinto, obispo",
+      "rank": "feria",
+      "feast": "Del Martirologio"
+    },
+    "04-09": {
+      "name": "Santa Casilda de Toledo",
+      "rank": "feria",
+      "feast": "Del Martirologio"
+    },
+    "04-10": {
+      "name": "San Miguel de los Santos",
+      "rank": "feria",
+      "feast": "Del Martirologio"
+    },
+    "04-11": {
+      "name": "San Estanislao, obispo y mártir",
+      "rank": "memorial",
+      "feast": "Memoria"
+    },
+    "04-12": {
+      "name": "San Julio I, papa",
+      "rank": "feria",
+      "feast": "Del Martirologio"
+    },
+    "04-13": {
+      "name": "San Martín I, papa y mártir",
+      "rank": "optional",
+      "feast": "Memoria libre"
+    },
+    "04-14": {
+      "name": "Santos Tiburcio, Valeriano y Máximo, mártires",
+      "rank": "feria",
+      "feast": "Del Martirologio"
+    },
+    "04-15": {
+      "name": "San Paterno de Avranches, obispo",
+      "rank": "feria",
+      "feast": "Del Martirologio"
+    },
+    "04-16": {
+      "name": "Santa Engracia y compañeros, mártires",
+      "rank": "feria",
+      "feast": "Del Martirologio"
+    },
+    "04-17": {
+      "name": "San Roberto de Chaise-Dieu",
+      "rank": "feria",
+      "feast": "Del Martirologio"
+    },
+    "04-18": {
+      "name": "San Perfecto de Córdoba, mártir",
+      "rank": "feria",
+      "feast": "Del Martirologio"
+    },
+    "04-19": {
+      "name": "San León IX, papa",
+      "rank": "feria",
+      "feast": "Del Martirologio"
+    },
+    "04-20": {
+      "name": "Santa Inés de Montepulciano, virgen",
+      "rank": "feria",
+      "feast": "Del Martirologio"
+    },
+    "04-21": {
+      "name": "San Anselmo, obispo y doctor de la Iglesia",
+      "rank": "optional",
+      "feast": "Memoria libre"
+    },
+    "04-22": {
+      "name": "San Sotero, papa y mártir",
+      "rank": "feria",
+      "feast": "Del Martirologio"
+    },
+    "04-23": {
+      "name": "San Jorge, mártir; san Adalberto, obispo y mártir",
+      "rank": "optional",
+      "feast": "Memoria libre"
+    },
+    "04-24": {
+      "name": "San Fidel de Sigmaringa, presbítero y mártir",
+      "rank": "optional",
+      "feast": "Memoria libre"
+    },
+    "04-25": {
+      "name": "San Marcos, evangelista",
+      "rank": "feast",
+      "feast": "Fiesta"
+    },
+    "04-26": {
+      "name": "San Cleto, papa y mártir",
+      "rank": "feria",
+      "feast": "Del Martirologio"
+    },
+    "04-27": {
+      "name": "San Pedro Canisio (memoria en algunos calendarios)",
+      "rank": "feria",
+      "feast": "Del Martirologio"
+    },
+    "04-28": {
+      "name": "San Pedro Chanel, presbítero y mártir; san Luis María Grignion de Montfort, presbítero",
+      "rank": "optional",
+      "feast": "Memoria libre"
+    },
+    "04-29": {
+      "name": "Santa Catalina de Siena, virgen y doctora de la Iglesia",
+      "rank": "memorial",
+      "feast": "Memoria"
+    },
+    "04-30": {
+      "name": "San Pío V, papa",
+      "rank": "optional",
+      "feast": "Memoria libre"
+    },
+    "05-01": {
+      "name": "San José Obrero",
+      "rank": "optional",
+      "feast": "Memoria libre"
+    },
+    "05-02": {
+      "name": "San Atanasio, obispo y doctor de la Iglesia",
+      "rank": "memorial",
+      "feast": "Memoria"
+    },
+    "05-03": {
+      "name": "Santos Felipe y Santiago, apóstoles",
+      "rank": "feast",
+      "feast": "Fiesta"
+    },
+    "05-04": {
+      "name": "San Florián, mártir",
+      "rank": "feria",
+      "feast": "Del Martirologio"
+    },
+    "05-05": {
+      "name": "San Ángel, presbítero y mártir",
+      "rank": "feria",
+      "feast": "Del Martirologio"
+    },
+    "05-06": {
+      "name": "San Juan ante la Puerta Latina",
+      "rank": "feria",
+      "feast": "Del Martirologio"
+    },
+    "05-07": {
+      "name": "San Agustín de Canterbury (traslado)",
+      "rank": "feria",
+      "feast": "Del Martirologio"
+    },
+    "05-08": {
+      "name": "San Victor de Milán",
+      "rank": "feria",
+      "feast": "Del Martirologio"
+    },
+    "05-09": {
+      "name": "San Pacomio, abad",
+      "rank": "feria",
+      "feast": "Del Martirologio"
+    },
+    "05-10": {
+      "name": "San Juan de Ávila, presbítero y doctor de la Iglesia",
+      "rank": "optional",
+      "feast": "Memoria libre"
+    },
+    "05-11": {
+      "name": "Santos Cirilo y Metodio (en algunos calendarios)",
+      "rank": "feria",
+      "feast": "Del Martirologio"
+    },
+    "05-12": {
+      "name": "Santos Nereo y Aquileo, mártires; san Pancracio, mártir",
+      "rank": "optional",
+      "feast": "Memoria libre"
+    },
+    "05-13": {
+      "name": "Nuestra Señora de Fátima",
+      "rank": "optional",
+      "feast": "Memoria libre"
+    },
+    "05-14": {
+      "name": "San Matías, apóstol",
+      "rank": "feast",
+      "feast": "Fiesta"
+    },
+    "05-15": {
+      "name": "San Isidro Labrador",
+      "rank": "feria",
+      "feast": "Del Martirologio"
+    },
+    "05-16": {
+      "name": "San Juan Nepomuceno, mártir",
+      "rank": "feria",
+      "feast": "Del Martirologio"
+    },
+    "05-17": {
+      "name": "San Pascual Bailón, religioso",
+      "rank": "feria",
+      "feast": "Del Martirologio"
+    },
+    "05-18": {
+      "name": "San Juan I, papa y mártir",
+      "rank": "optional",
+      "feast": "Memoria libre"
+    },
+    "05-19": {
+      "name": "San Pedro Celestino, papa",
+      "rank": "feria",
+      "feast": "Del Martirologio"
+    },
+    "05-20": {
+      "name": "San Bernardino de Siena, presbítero",
+      "rank": "optional",
+      "feast": "Memoria libre"
+    },
+    "05-21": {
+      "name": "San Cristóbal Magallanes, presbítero, y compañeros, mártires",
+      "rank": "optional",
+      "feast": "Memoria libre"
+    },
+    "05-22": {
+      "name": "Santa Rita de Casia, religiosa",
+      "rank": "optional",
+      "feast": "Memoria libre"
+    },
+    "05-23": {
+      "name": "San Juan Bautista de Rossi, presbítero",
+      "rank": "feria",
+      "feast": "Del Martirologio"
+    },
+    "05-24": {
+      "name": "Santa María Auxiliadora",
+      "rank": "feria",
+      "feast": "Del Martirologio"
+    },
+    "05-25": {
+      "name": "San Beda el Venerable, presbítero y doctor; san Gregorio VII, papa; santa María Magdalena de Pazzi, virgen",
+      "rank": "optional",
+      "feast": "Memoria libre"
+    },
+    "05-26": {
+      "name": "San Felipe Neri, presbítero",
+      "rank": "memorial",
+      "feast": "Memoria"
+    },
+    "05-27": {
+      "name": "San Agustín de Canterbury, obispo",
+      "rank": "optional",
+      "feast": "Memoria libre"
+    },
+    "05-28": {
+      "name": "San Germán de París, obispo",
+      "rank": "feria",
+      "feast": "Del Martirologio"
+    },
+    "05-29": {
+      "name": "San Maximino de Tréveris, obispo",
+      "rank": "feria",
+      "feast": "Del Martirologio"
+    },
+    "05-30": {
+      "name": "San Fernando III de Castilla",
+      "rank": "feria",
+      "feast": "Del Martirologio"
+    },
+    "05-31": {
+      "name": "Visitación de la Virgen María",
+      "rank": "feast",
+      "feast": "Fiesta"
+    },
+    "06-01": {
+      "name": "San Justino, mártir",
+      "rank": "memorial",
+      "feast": "Memoria"
+    },
+    "06-02": {
+      "name": "Santos Marcelino y Pedro, mártires",
+      "rank": "optional",
+      "feast": "Memoria libre"
+    },
+    "06-03": {
+      "name": "Santos Carlos Lwanga y compañeros, mártires",
+      "rank": "memorial",
+      "feast": "Memoria"
+    },
+    "06-04": {
+      "name": "San Francisco Caracciolo, presbítero",
+      "rank": "feria",
+      "feast": "Del Martirologio"
+    },
+    "06-05": {
+      "name": "San Bonifacio, obispo y mártir",
+      "rank": "memorial",
+      "feast": "Memoria"
+    },
+    "06-06": {
+      "name": "San Norberto, obispo",
+      "rank": "optional",
+      "feast": "Memoria libre"
+    },
+    "06-07": {
+      "name": "San Roberto de Newminster, abad",
+      "rank": "feria",
+      "feast": "Del Martirologio"
+    },
+    "06-08": {
+      "name": "San Medardo, obispo",
+      "rank": "feria",
+      "feast": "Del Martirologio"
+    },
+    "06-09": {
+      "name": "San Efrén, diácono y doctor de la Iglesia",
+      "rank": "optional",
+      "feast": "Memoria libre"
+    },
+    "06-10": {
+      "name": "Santa Margarita de Escocia (otra memoria)",
+      "rank": "feria",
+      "feast": "Del Martirologio"
+    },
+    "06-11": {
+      "name": "San Bernabé, apóstol",
+      "rank": "memorial",
+      "feast": "Memoria"
+    },
+    "06-12": {
+      "name": "San Onofre, ermitaño",
+      "rank": "feria",
+      "feast": "Del Martirologio"
+    },
+    "06-13": {
+      "name": "San Antonio de Padua, presbítero y doctor de la Iglesia",
+      "rank": "memorial",
+      "feast": "Memoria"
+    },
+    "06-14": {
+      "name": "San Eliseo, profeta",
+      "rank": "feria",
+      "feast": "Del Martirologio"
+    },
+    "06-15": {
+      "name": "San Vito, mártir",
+      "rank": "feria",
+      "feast": "Del Martirologio"
+    },
+    "06-16": {
+      "name": "San Juan Francisco Régis, presbítero",
+      "rank": "feria",
+      "feast": "Del Martirologio"
+    },
+    "06-17": {
+      "name": "San Rainerio de Pisa",
+      "rank": "feria",
+      "feast": "Del Martirologio"
+    },
+    "06-18": {
+      "name": "Santos Marcos y Marceliano, mártires",
+      "rank": "feria",
+      "feast": "Del Martirologio"
+    },
+    "06-19": {
+      "name": "San Romualdo, abad",
+      "rank": "optional",
+      "feast": "Memoria libre"
+    },
+    "06-20": {
+      "name": "San Silverio, papa y mártir",
+      "rank": "feria",
+      "feast": "Del Martirologio"
+    },
+    "06-21": {
+      "name": "San Luis Gonzaga, religioso",
+      "rank": "memorial",
+      "feast": "Memoria"
+    },
+    "06-22": {
+      "name": "San Paulino de Nola, obispo; santos Juan Fisher, obispo, y Tomás Moro, mártires",
+      "rank": "optional",
+      "feast": "Memoria libre"
+    },
+    "06-23": {
+      "name": "San José Cafasso, presbítero",
+      "rank": "feria",
+      "feast": "Del Martirologio"
+    },
+    "06-24": {
+      "name": "Natividad de san Juan Bautista",
+      "rank": "solemnity",
+      "feast": "Solemnidad"
+    },
+    "06-25": {
+      "name": "San Máximo de Turín (otra memoria)",
+      "rank": "feria",
+      "feast": "Del Martirologio"
+    },
+    "06-26": {
+      "name": "San Josemaría Escrivá, presbítero",
+      "rank": "feria",
+      "feast": "Del Martirologio"
+    },
+    "06-27": {
+      "name": "San Cirilo de Alejandría, obispo y doctor de la Iglesia",
+      "rank": "optional",
+      "feast": "Memoria libre"
+    },
+    "06-28": {
+      "name": "San Ireneo, obispo y mártir",
+      "rank": "memorial",
+      "feast": "Memoria"
+    },
+    "06-29": {
+      "name": "Santos Pedro y Pablo, apóstoles",
+      "rank": "solemnity",
+      "feast": "Solemnidad"
+    },
+    "06-30": {
+      "name": "Los Primeros Mártires de la Iglesia Romana",
+      "rank": "optional",
+      "feast": "Memoria libre"
+    },
+    "07-01": {
+      "name": "San Aarón, sumo sacerdote",
+      "rank": "feria",
+      "feast": "Del Martirologio"
+    },
+    "07-02": {
+      "name": "Santos Proceso y Martiniano, mártires",
+      "rank": "feria",
+      "feast": "Del Martirologio"
+    },
+    "07-03": {
+      "name": "Santo Tomás, apóstol",
+      "rank": "feast",
+      "feast": "Fiesta"
+    },
+    "07-04": {
+      "name": "Santa Isabel de Portugal",
+      "rank": "optional",
+      "feast": "Memoria libre"
+    },
+    "07-05": {
+      "name": "San Antonio María Zaccaria, presbítero",
+      "rank": "optional",
+      "feast": "Memoria libre"
+    },
+    "07-06": {
+      "name": "Santa María Goretti, virgen y mártir",
+      "rank": "optional",
+      "feast": "Memoria libre"
+    },
+    "07-07": {
+      "name": "San Willibaldo, obispo",
+      "rank": "feria",
+      "feast": "Del Martirologio"
+    },
+    "07-08": {
+      "name": "Santa Isabel de Portugal (otra fecha)",
+      "rank": "feria",
+      "feast": "Del Martirologio"
+    },
+    "07-09": {
+      "name": "Santa Agustina Zhao Rong, virgen, y compañeros, mártires",
+      "rank": "optional",
+      "feast": "Memoria libre"
+    },
+    "07-10": {
+      "name": "Los Siete Hermanos Mártires; santas Rufina y Segunda",
+      "rank": "feria",
+      "feast": "Del Martirologio"
+    },
+    "07-11": {
+      "name": "San Benito, abad",
+      "rank": "memorial",
+      "feast": "Memoria"
+    },
+    "07-12": {
+      "name": "San Juan Gualberto, abad",
+      "rank": "feria",
+      "feast": "Del Martirologio"
+    },
+    "07-13": {
+      "name": "San Enrique",
+      "rank": "optional",
+      "feast": "Memoria libre"
+    },
+    "07-14": {
+      "name": "San Camilo de Lelis, presbítero",
+      "rank": "optional",
+      "feast": "Memoria libre"
+    },
+    "07-15": {
+      "name": "San Buenaventura, obispo y doctor de la Iglesia",
+      "rank": "memorial",
+      "feast": "Memoria"
+    },
+    "07-16": {
+      "name": "Nuestra Señora del Carmen",
+      "rank": "optional",
+      "feast": "Memoria libre"
+    },
+    "07-17": {
+      "name": "Santa Alejandrina de Fréjus",
+      "rank": "feria",
+      "feast": "Del Martirologio"
+    },
+    "07-18": {
+      "name": "San Federico de Utrecht, obispo y mártir",
+      "rank": "feria",
+      "feast": "Del Martirologio"
+    },
+    "07-19": {
+      "name": "San Arsenio el Grande",
+      "rank": "feria",
+      "feast": "Del Martirologio"
+    },
+    "07-20": {
+      "name": "San Apolinar, obispo y mártir",
+      "rank": "optional",
+      "feast": "Memoria libre"
+    },
+    "07-21": {
+      "name": "San Lorenzo de Brindis, presbítero y doctor de la Iglesia",
+      "rank": "optional",
+      "feast": "Memoria libre"
+    },
+    "07-22": {
+      "name": "Santa María Magdalena",
+      "rank": "feast",
+      "feast": "Fiesta"
+    },
+    "07-23": {
+      "name": "Santa Brígida, religiosa",
+      "rank": "optional",
+      "feast": "Memoria libre"
+    },
+    "07-24": {
+      "name": "San Charbel Makhluf, presbítero",
+      "rank": "optional",
+      "feast": "Memoria libre"
+    },
+    "07-25": {
+      "name": "Santiago, apóstol",
+      "rank": "feast",
+      "feast": "Fiesta"
+    },
+    "07-26": {
+      "name": "Santos Joaquín y Ana, padres de la Virgen María",
+      "rank": "memorial",
+      "feast": "Memoria"
+    },
+    "07-27": {
+      "name": "San Pantaleón, mártir",
+      "rank": "feria",
+      "feast": "Del Martirologio"
+    },
+    "07-28": {
+      "name": "San Víctor I, papa y mártir",
+      "rank": "feria",
+      "feast": "Del Martirologio"
+    },
+    "07-29": {
+      "name": "Santos Marta, María y Lázaro",
+      "rank": "memorial",
+      "feast": "Memoria"
+    },
+    "07-30": {
+      "name": "San Pedro Crisólogo, obispo y doctor de la Iglesia",
+      "rank": "optional",
+      "feast": "Memoria libre"
+    },
+    "07-31": {
+      "name": "San Ignacio de Loyola, presbítero",
+      "rank": "memorial",
+      "feast": "Memoria"
+    },
+    "08-01": {
+      "name": "San Alfonso María de Ligorio, obispo y doctor de la Iglesia",
+      "rank": "memorial",
+      "feast": "Memoria"
+    },
+    "08-02": {
+      "name": "San Eusebio de Vercelli, obispo; san Pedro Julián Eymard, presbítero",
+      "rank": "optional",
+      "feast": "Memoria libre"
+    },
+    "08-03": {
+      "name": "San Lidano, abad",
+      "rank": "feria",
+      "feast": "Del Martirologio"
+    },
+    "08-04": {
+      "name": "San Juan María Vianney, presbítero",
+      "rank": "memorial",
+      "feast": "Memoria"
+    },
+    "08-05": {
+      "name": "Dedicación de la Basílica de Santa María la Mayor",
+      "rank": "optional",
+      "feast": "Memoria libre"
+    },
+    "08-06": {
+      "name": "Transfiguración del Señor",
+      "rank": "feast",
+      "feast": "Fiesta"
+    },
+    "08-07": {
+      "name": "San Sixto II, papa, y compañeros, mártires; san Cayetano, presbítero",
+      "rank": "optional",
+      "feast": "Memoria libre"
+    },
+    "08-08": {
+      "name": "Santo Domingo, presbítero",
+      "rank": "memorial",
+      "feast": "Memoria"
+    },
+    "08-09": {
+      "name": "Santa Teresa Benedicta de la Cruz, virgen y mártir",
+      "rank": "optional",
+      "feast": "Memoria libre"
+    },
+    "08-10": {
+      "name": "San Lorenzo, diácono y mártir",
+      "rank": "feast",
+      "feast": "Fiesta"
+    },
+    "08-11": {
+      "name": "Santa Clara, virgen",
+      "rank": "memorial",
+      "feast": "Memoria"
+    },
+    "08-12": {
+      "name": "Santa Juana Francisca de Chantal, religiosa",
+      "rank": "optional",
+      "feast": "Memoria libre"
+    },
+    "08-13": {
+      "name": "Santos Ponciano, papa, e Hipólito, presbítero, mártires",
+      "rank": "optional",
+      "feast": "Memoria libre"
+    },
+    "08-14": {
+      "name": "San Maximiliano María Kolbe, presbítero y mártir",
+      "rank": "memorial",
+      "feast": "Memoria"
+    },
+    "08-15": {
+      "name": "Asunción de la Virgen María",
+      "rank": "solemnity",
+      "feast": "Solemnidad"
+    },
+    "08-16": {
+      "name": "San Esteban de Hungría",
+      "rank": "optional",
+      "feast": "Memoria libre"
+    },
+    "08-17": {
+      "name": "San Jacinto de Polonia, presbítero",
+      "rank": "feria",
+      "feast": "Del Martirologio"
+    },
+    "08-18": {
+      "name": "Santa Elena, emperatriz",
+      "rank": "feria",
+      "feast": "Del Martirologio"
+    },
+    "08-19": {
+      "name": "San Juan Eudes, presbítero",
+      "rank": "optional",
+      "feast": "Memoria libre"
+    },
+    "08-20": {
+      "name": "San Bernardo, abad y doctor de la Iglesia",
+      "rank": "memorial",
+      "feast": "Memoria"
+    },
+    "08-21": {
+      "name": "San Pío X, papa",
+      "rank": "memorial",
+      "feast": "Memoria"
+    },
+    "08-22": {
+      "name": "Bienaventurada Virgen María Reina",
+      "rank": "memorial",
+      "feast": "Memoria"
+    },
+    "08-23": {
+      "name": "Santa Rosa de Lima, virgen",
+      "rank": "optional",
+      "feast": "Memoria libre"
+    },
+    "08-24": {
+      "name": "San Bartolomé, apóstol",
+      "rank": "feast",
+      "feast": "Fiesta"
+    },
+    "08-25": {
+      "name": "San Luis; san José de Calasanz, presbítero",
+      "rank": "optional",
+      "feast": "Memoria libre"
+    },
+    "08-26": {
+      "name": "San Ceferino, papa y mártir",
+      "rank": "feria",
+      "feast": "Del Martirologio"
+    },
+    "08-27": {
+      "name": "Santa Mónica",
+      "rank": "memorial",
+      "feast": "Memoria"
+    },
+    "08-28": {
+      "name": "San Agustín, obispo y doctor de la Iglesia",
+      "rank": "memorial",
+      "feast": "Memoria"
+    },
+    "08-29": {
+      "name": "Martirio de san Juan Bautista",
+      "rank": "memorial",
+      "feast": "Memoria"
+    },
+    "08-30": {
+      "name": "Santa Rosa de Lima (en algunos calendarios)",
+      "rank": "feria",
+      "feast": "Del Martirologio"
+    },
+    "08-31": {
+      "name": "San Ramón Nonato",
+      "rank": "feria",
+      "feast": "Del Martirologio"
+    },
+    "09-01": {
+      "name": "San Gil, abad",
+      "rank": "feria",
+      "feast": "Del Martirologio"
+    },
+    "09-02": {
+      "name": "San Esteban, rey de Hungría (otra fecha)",
+      "rank": "feria",
+      "feast": "Del Martirologio"
+    },
+    "09-03": {
+      "name": "San Gregorio Magno, papa y doctor de la Iglesia",
+      "rank": "memorial",
+      "feast": "Memoria"
+    },
+    "09-04": {
+      "name": "Santa Rosa de Viterbo, virgen",
+      "rank": "feria",
+      "feast": "Del Martirologio"
+    },
+    "09-05": {
+      "name": "Santa Teresa de Calcuta, virgen",
+      "rank": "optional",
+      "feast": "Memoria libre"
+    },
+    "09-06": {
+      "name": "San Eleuterio, abad",
+      "rank": "feria",
+      "feast": "Del Martirologio"
+    },
+    "09-07": {
+      "name": "Santa Regina, virgen y mártir",
+      "rank": "feria",
+      "feast": "Del Martirologio"
+    },
+    "09-08": {
+      "name": "Natividad de la Virgen María",
+      "rank": "feast",
+      "feast": "Fiesta"
+    },
+    "09-09": {
+      "name": "San Pedro Claver, presbítero",
+      "rank": "optional",
+      "feast": "Memoria libre"
+    },
+    "09-10": {
+      "name": "San Nicolás de Tolentino, presbítero",
+      "rank": "feria",
+      "feast": "Del Martirologio"
+    },
+    "09-11": {
+      "name": "Santos Proto y Jacinto, mártires",
+      "rank": "feria",
+      "feast": "Del Martirologio"
+    },
+    "09-12": {
+      "name": "Santísimo Nombre de María",
+      "rank": "optional",
+      "feast": "Memoria libre"
+    },
+    "09-13": {
+      "name": "San Juan Crisóstomo, obispo y doctor de la Iglesia",
+      "rank": "memorial",
+      "feast": "Memoria"
+    },
+    "09-14": {
+      "name": "Exaltación de la Santa Cruz",
+      "rank": "feast",
+      "feast": "Fiesta"
+    },
+    "09-15": {
+      "name": "Nuestra Señora de los Dolores",
+      "rank": "memorial",
+      "feast": "Memoria"
+    },
+    "09-16": {
+      "name": "Santos Cornelio, papa, y Cipriano, obispo, mártires",
+      "rank": "memorial",
+      "feast": "Memoria"
+    },
+    "09-17": {
+      "name": "San Roberto Belarmino, obispo y doctor; san Hildegarde de Bingen, virgen y doctora",
+      "rank": "optional",
+      "feast": "Memoria libre"
+    },
+    "09-18": {
+      "name": "San José de Cupertino, presbítero",
+      "rank": "feria",
+      "feast": "Del Martirologio"
+    },
+    "09-19": {
+      "name": "San Jenaro, obispo y mártir",
+      "rank": "optional",
+      "feast": "Memoria libre"
+    },
+    "09-20": {
+      "name": "Santos Andrés Kim Taegon, presbítero, Pablo Chong Hasang y compañeros, mártires",
+      "rank": "memorial",
+      "feast": "Memoria"
+    },
+    "09-21": {
+      "name": "San Mateo, apóstol y evangelista",
+      "rank": "feast",
+      "feast": "Fiesta"
+    },
+    "09-22": {
+      "name": "San Mauricio y compañeros, mártires",
+      "rank": "feria",
+      "feast": "Del Martirologio"
+    },
+    "09-23": {
+      "name": "San Pío de Pietrelcina, presbítero",
+      "rank": "memorial",
+      "feast": "Memoria"
+    },
+    "09-24": {
+      "name": "Nuestra Señora de la Merced",
+      "rank": "feria",
+      "feast": "Del Martirologio"
+    },
+    "09-25": {
+      "name": "San Cleofás",
+      "rank": "feria",
+      "feast": "Del Martirologio"
+    },
+    "09-26": {
+      "name": "Santos Cosme y Damián, mártires",
+      "rank": "optional",
+      "feast": "Memoria libre"
+    },
+    "09-27": {
+      "name": "San Vicente de Paúl, presbítero",
+      "rank": "memorial",
+      "feast": "Memoria"
+    },
+    "09-28": {
+      "name": "San Wenceslao, mártir; san Lorenzo Ruiz y compañeros, mártires",
+      "rank": "optional",
+      "feast": "Memoria libre"
+    },
+    "09-29": {
+      "name": "Santos Miguel, Gabriel y Rafael, arcángeles",
+      "rank": "feast",
+      "feast": "Fiesta"
+    },
+    "09-30": {
+      "name": "San Jerónimo, presbítero y doctor de la Iglesia",
+      "rank": "memorial",
+      "feast": "Memoria"
+    },
+    "10-01": {
+      "name": "Santa Teresa del Niño Jesús, virgen y doctora de la Iglesia",
+      "rank": "memorial",
+      "feast": "Memoria"
+    },
+    "10-02": {
+      "name": "Santos Ángeles Custodios",
+      "rank": "memorial",
+      "feast": "Memoria"
+    },
+    "10-03": {
+      "name": "San Gerard Sagredo, obispo y mártir",
+      "rank": "feria",
+      "feast": "Del Martirologio"
+    },
+    "10-04": {
+      "name": "San Francisco de Asís",
+      "rank": "memorial",
+      "feast": "Memoria"
+    },
+    "10-05": {
+      "name": "Santa Faustina Kowalska, virgen",
+      "rank": "optional",
+      "feast": "Memoria libre"
+    },
+    "10-06": {
+      "name": "San Bruno, presbítero",
+      "rank": "optional",
+      "feast": "Memoria libre"
+    },
+    "10-07": {
+      "name": "Nuestra Señora del Rosario",
+      "rank": "memorial",
+      "feast": "Memoria"
+    },
+    "10-08": {
+      "name": "Santa Pelagia",
+      "rank": "feria",
+      "feast": "Del Martirologio"
+    },
+    "10-09": {
+      "name": "San Dionisio, obispo, y compañeros, mártires; san Juan Leonardi, presbítero",
+      "rank": "optional",
+      "feast": "Memoria libre"
+    },
+    "10-10": {
+      "name": "San Francisco de Borja, presbítero",
+      "rank": "feria",
+      "feast": "Del Martirologio"
+    },
+    "10-11": {
+      "name": "San Juan XXIII, papa",
+      "rank": "optional",
+      "feast": "Memoria libre"
+    },
+    "10-12": {
+      "name": "Nuestra Señora del Pilar",
+      "rank": "feria",
+      "feast": "Del Martirologio"
+    },
+    "10-13": {
+      "name": "San Eduardo el Confesor",
+      "rank": "feria",
+      "feast": "Del Martirologio"
+    },
+    "10-14": {
+      "name": "San Calisto I, papa y mártir",
+      "rank": "optional",
+      "feast": "Memoria libre"
+    },
+    "10-15": {
+      "name": "Santa Teresa de Jesús, virgen y doctora de la Iglesia",
+      "rank": "memorial",
+      "feast": "Memoria"
+    },
+    "10-16": {
+      "name": "Santa Eduvigis, religiosa; santa Margarita María de Alacoque, virgen",
+      "rank": "optional",
+      "feast": "Memoria libre"
+    },
+    "10-17": {
+      "name": "San Ignacio de Antioquía, obispo y mártir",
+      "rank": "memorial",
+      "feast": "Memoria"
+    },
+    "10-18": {
+      "name": "San Lucas, evangelista",
+      "rank": "feast",
+      "feast": "Fiesta"
+    },
+    "10-19": {
+      "name": "Santos Juan de Brébeuf e Isaac Jogues, presbíteros, y compañeros, mártires; san Pablo de la Cruz, presbítero",
+      "rank": "optional",
+      "feast": "Memoria libre"
+    },
+    "10-20": {
+      "name": "Santa María Bertilla Boscardin, virgen",
+      "rank": "feria",
+      "feast": "Del Martirologio"
+    },
+    "10-21": {
+      "name": "San Gaspar del Búfalo, presbítero",
+      "rank": "feria",
+      "feast": "Del Martirologio"
+    },
+    "10-22": {
+      "name": "San Juan Pablo II, papa",
+      "rank": "optional",
+      "feast": "Memoria libre"
+    },
+    "10-23": {
+      "name": "San Juan de Capistrano, presbítero",
+      "rank": "optional",
+      "feast": "Memoria libre"
+    },
+    "10-24": {
+      "name": "San Antonio María Claret, obispo",
+      "rank": "optional",
+      "feast": "Memoria libre"
+    },
+    "10-25": {
+      "name": "Santos Crisanto y Daría, mártires",
+      "rank": "feria",
+      "feast": "Del Martirologio"
+    },
+    "10-26": {
+      "name": "San Evaristo, papa y mártir",
+      "rank": "feria",
+      "feast": "Del Martirologio"
+    },
+    "10-27": {
+      "name": "San Frumencio, obispo",
+      "rank": "feria",
+      "feast": "Del Martirologio"
+    },
+    "10-28": {
+      "name": "Santos Simón y Judas, apóstoles",
+      "rank": "feast",
+      "feast": "Fiesta"
+    },
+    "10-29": {
+      "name": "San Narciso de Jerusalén, obispo",
+      "rank": "feria",
+      "feast": "Del Martirologio"
+    },
+    "10-30": {
+      "name": "San Marcelo, centurión y mártir",
+      "rank": "feria",
+      "feast": "Del Martirologio"
+    },
+    "10-31": {
+      "name": "San Quirino de Neuss, mártir",
+      "rank": "feria",
+      "feast": "Del Martirologio"
+    },
+    "11-01": {
+      "name": "Todos los Santos",
+      "rank": "solemnity",
+      "feast": "Solemnidad"
+    },
+    "11-02": {
+      "name": "Conmemoración de todos los fieles difuntos",
+      "rank": "feast",
+      "feast": "Conmemoración"
+    },
+    "11-03": {
+      "name": "San Martín de Porres, religioso",
+      "rank": "optional",
+      "feast": "Memoria libre"
+    },
+    "11-04": {
+      "name": "San Carlos Borromeo, obispo",
+      "rank": "memorial",
+      "feast": "Memoria"
+    },
+    "11-05": {
+      "name": "Santos Zacarías e Isabel",
+      "rank": "feria",
+      "feast": "Del Martirologio"
+    },
+    "11-06": {
+      "name": "San Leonardo de Noblac",
+      "rank": "feria",
+      "feast": "Del Martirologio"
+    },
+    "11-07": {
+      "name": "San Willibrordo, obispo",
+      "rank": "feria",
+      "feast": "Del Martirologio"
+    },
+    "11-08": {
+      "name": "Los Cuatro Santos Coronados, mártires",
+      "rank": "feria",
+      "feast": "Del Martirologio"
+    },
+    "11-09": {
+      "name": "Dedicación de la Basílica de Letrán",
+      "rank": "feast",
+      "feast": "Fiesta"
+    },
+    "11-10": {
+      "name": "San León Magno, papa y doctor de la Iglesia",
+      "rank": "memorial",
+      "feast": "Memoria"
+    },
+    "11-11": {
+      "name": "San Martín de Tours, obispo",
+      "rank": "memorial",
+      "feast": "Memoria"
+    },
+    "11-12": {
+      "name": "San Josafat, obispo y mártir",
+      "rank": "memorial",
+      "feast": "Memoria"
+    },
+    "11-13": {
+      "name": "San Estanislao Kostka, religioso",
+      "rank": "feria",
+      "feast": "Del Martirologio"
+    },
+    "11-14": {
+      "name": "San Lorenzo O'Toole, obispo",
+      "rank": "feria",
+      "feast": "Del Martirologio"
+    },
+    "11-15": {
+      "name": "San Alberto Magno, obispo y doctor de la Iglesia",
+      "rank": "optional",
+      "feast": "Memoria libre"
+    },
+    "11-16": {
+      "name": "Santa Margarita de Escocia; santa Gertrudis, virgen",
+      "rank": "optional",
+      "feast": "Memoria libre"
+    },
+    "11-17": {
+      "name": "Santa Isabel de Hungría, religiosa",
+      "rank": "memorial",
+      "feast": "Memoria"
+    },
+    "11-18": {
+      "name": "Dedicación de las Basílicas de san Pedro y san Pablo, apóstoles",
+      "rank": "optional",
+      "feast": "Memoria libre"
+    },
+    "11-19": {
+      "name": "Santa Matilde (otra memoria)",
+      "rank": "feria",
+      "feast": "Del Martirologio"
+    },
+    "11-20": {
+      "name": "San Félix de Valois",
+      "rank": "feria",
+      "feast": "Del Martirologio"
+    },
+    "11-21": {
+      "name": "Presentación de la Virgen María",
+      "rank": "memorial",
+      "feast": "Memoria"
+    },
+    "11-22": {
+      "name": "Santa Cecilia, virgen y mártir",
+      "rank": "memorial",
+      "feast": "Memoria"
+    },
+    "11-23": {
+      "name": "San Clemente I, papa y mártir; san Columbano, abad",
+      "rank": "optional",
+      "feast": "Memoria libre"
+    },
+    "11-24": {
+      "name": "Santos Andrés Dung-Lac, presbítero, y compañeros, mártires",
+      "rank": "memorial",
+      "feast": "Memoria"
+    },
+    "11-25": {
+      "name": "Santa Catalina de Alejandría, virgen y mártir",
+      "rank": "optional",
+      "feast": "Memoria libre"
+    },
+    "11-26": {
+      "name": "San Silvestre Gozzolini, abad",
+      "rank": "feria",
+      "feast": "Del Martirologio"
+    },
+    "11-27": {
+      "name": "Nuestra Señora de la Medalla Milagrosa",
+      "rank": "feria",
+      "feast": "Del Martirologio"
+    },
+    "11-28": {
+      "name": "San Cataldo, obispo",
+      "rank": "feria",
+      "feast": "Del Martirologio"
+    },
+    "11-29": {
+      "name": "San Saturnino, mártir",
+      "rank": "feria",
+      "feast": "Del Martirologio"
+    },
+    "11-30": {
+      "name": "San Andrés, apóstol",
+      "rank": "feast",
+      "feast": "Fiesta"
+    },
+    "12-01": {
+      "name": "San Eligio, obispo",
+      "rank": "feria",
+      "feast": "Del Martirologio"
+    },
+    "12-02": {
+      "name": "Santa Bibiana, virgen y mártir",
+      "rank": "feria",
+      "feast": "Del Martirologio"
+    },
+    "12-03": {
+      "name": "San Francisco Javier, presbítero",
+      "rank": "memorial",
+      "feast": "Memoria"
+    },
+    "12-04": {
+      "name": "San Juan Damasceno, presbítero y doctor de la Iglesia",
+      "rank": "optional",
+      "feast": "Memoria libre"
+    },
+    "12-05": {
+      "name": "San Sabas, abad",
+      "rank": "feria",
+      "feast": "Del Martirologio"
+    },
+    "12-06": {
+      "name": "San Nicolás, obispo",
+      "rank": "optional",
+      "feast": "Memoria libre"
+    },
+    "12-07": {
+      "name": "San Ambrosio, obispo y doctor de la Iglesia",
+      "rank": "memorial",
+      "feast": "Memoria"
+    },
+    "12-08": {
+      "name": "Inmaculada Concepción de la Virgen María",
+      "rank": "solemnity",
+      "feast": "Solemnidad"
+    },
+    "12-09": {
+      "name": "San Juan Diego Cuauhtlatoatzin",
+      "rank": "optional",
+      "feast": "Memoria libre"
+    },
+    "12-10": {
+      "name": "Nuestra Señora de Loreto",
+      "rank": "optional",
+      "feast": "Memoria libre"
+    },
+    "12-11": {
+      "name": "San Dámaso I, papa",
+      "rank": "optional",
+      "feast": "Memoria libre"
+    },
+    "12-12": {
+      "name": "Nuestra Señora de Guadalupe",
+      "rank": "optional",
+      "feast": "Fiesta en América"
+    },
+    "12-13": {
+      "name": "Santa Lucía, virgen y mártir",
+      "rank": "memorial",
+      "feast": "Memoria"
+    },
+    "12-14": {
+      "name": "San Juan de la Cruz, presbítero y doctor de la Iglesia",
+      "rank": "memorial",
+      "feast": "Memoria"
+    },
+    "12-15": {
+      "name": "Santa Nino de Georgia",
+      "rank": "feria",
+      "feast": "Del Martirologio"
+    },
+    "12-16": {
+      "name": "Santa Adelaida",
+      "rank": "feria",
+      "feast": "Del Martirologio"
+    },
+    "12-17": {
+      "name": "San Lázaro de Betania",
+      "rank": "feria",
+      "feast": "Del Martirologio"
+    },
+    "12-18": {
+      "name": "San Malaquías, obispo",
+      "rank": "feria",
+      "feast": "Del Martirologio"
+    },
+    "12-19": {
+      "name": "San Nemesio, mártir",
+      "rank": "feria",
+      "feast": "Del Martirologio"
+    },
+    "12-20": {
+      "name": "Santo Domingo de Silos, abad",
+      "rank": "feria",
+      "feast": "Del Martirologio"
+    },
+    "12-21": {
+      "name": "San Pedro Canisio, presbítero y doctor de la Iglesia",
+      "rank": "optional",
+      "feast": "Memoria libre"
+    },
+    "12-22": {
+      "name": "Santa Francisca Javiera Cabrini, virgen",
+      "rank": "feria",
+      "feast": "Del Martirologio"
+    },
+    "12-23": {
+      "name": "San Juan de Kęty, presbítero",
+      "rank": "optional",
+      "feast": "Memoria libre"
+    },
+    "12-24": {
+      "name": "Santos Adán y Eva (tradición)",
+      "rank": "feria",
+      "feast": "Del Martirologio"
+    },
+    "12-25": {
+      "name": "Natividad del Señor",
+      "rank": "solemnity",
+      "feast": "Solemnidad"
+    },
+    "12-26": {
+      "name": "San Esteban, protomártir",
+      "rank": "feast",
+      "feast": "Fiesta"
+    },
+    "12-27": {
+      "name": "San Juan, apóstol y evangelista",
+      "rank": "feast",
+      "feast": "Fiesta"
+    },
+    "12-28": {
+      "name": "Santos Inocentes, mártires",
+      "rank": "feast",
+      "feast": "Fiesta"
+    },
+    "12-29": {
+      "name": "Santo Tomás Becket, obispo y mártir",
+      "rank": "optional",
+      "feast": "Memoria libre"
+    },
+    "12-30": {
+      "name": "San Ruggero de Canne",
+      "rank": "feria",
+      "feast": "Del Martirologio"
+    },
+    "12-31": {
+      "name": "San Silvestre I, papa",
+      "rank": "optional",
+      "feast": "Memoria libre"
+    }
+  }
+};

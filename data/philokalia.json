@@ -1,0 +1,551 @@
+{
+  "meta": {
+    "title": "Lectura de la Filocalia (puntero diario)",
+    "lang": "es",
+    "approach": "Solo metadatos orientativos (autor, obra, sección/tema) y una invitación breve en español original. No se reproducen citas sustanciales de ediciones modernas de la Filocalia (p. ej. Palmer/Sherrard/Ware ni traducciones españolas protegidas). La Filocalia es la tradición de los Padres; lee en tu edición.",
+    "cycle": "Índice por día del año (1–365/366) módulo longitud del ciclo.",
+    "updated": "2026-10-22"
+  },
+  "cycle": [
+    {
+      "author": "Evagrio Póntico",
+      "work": "Sobre la oración",
+      "section": "caps. 1–15: atención y vigilancia",
+      "invite": "Léelo despacio; quédate con una frase y llévala a la oración."
+    },
+    {
+      "author": "Evagrio Póntico",
+      "work": "Sobre la oración",
+      "section": "caps. 16–30: pureza de la mente",
+      "invite": "Lee un poco y vuelve a la Oración de Jesús con más paz."
+    },
+    {
+      "author": "Evagrio Póntico",
+      "work": "Sobre la oración",
+      "section": "caps. 31–45: tentaciones en la oración",
+      "invite": "No busques acabar: busca prestar atención."
+    },
+    {
+      "author": "Evagrio Póntico",
+      "work": "Sobre la oración",
+      "section": "caps. 46–60: lágrimas y compunción",
+      "invite": "Un párrafo basta si lo saboreas en silencio."
+    },
+    {
+      "author": "Evagrio Póntico",
+      "work": "Praktikos",
+      "section": "sobre los ocho pensamientos",
+      "invite": "Lee como quien escucha a un padre anciano."
+    },
+    {
+      "author": "Evagrio Póntico",
+      "work": "Praktikos",
+      "section": "sobre la acedia y la paciencia",
+      "invite": "Deja que el texto te lleve a pedir misericordia."
+    },
+    {
+      "author": "Antonio el Grande",
+      "work": "Cartas y dichos (tradición filocálica)",
+      "section": "vigilancia del corazón",
+      "invite": "Si te distraes, vuelve con mansedumbre al hilo de la lectura."
+    },
+    {
+      "author": "Macario el Egipcio",
+      "work": "Homilías espirituales (tradición)",
+      "section": "el corazón como templo",
+      "invite": "Guarda en el corazón una idea sencilla para el día."
+    },
+    {
+      "author": "Macario el Egipcio",
+      "work": "Homilías espirituales (tradición)",
+      "section": "la gracia que trabaja en secreto",
+      "invite": "Léelo despacio; quédate con una frase y llévala a la oración."
+    },
+    {
+      "author": "Diádoco de Fotice",
+      "work": "Cien capítulos gnósticos",
+      "section": "caps. 1–20: discernimiento",
+      "invite": "Lee un poco y vuelve a la Oración de Jesús con más paz."
+    },
+    {
+      "author": "Diádoco de Fotice",
+      "work": "Cien capítulos gnósticos",
+      "section": "caps. 21–40: memoria de Dios",
+      "invite": "No busques acabar: busca prestar atención."
+    },
+    {
+      "author": "Diádoco de Fotice",
+      "work": "Cien capítulos gnósticos",
+      "section": "caps. 41–60: calor del Espíritu",
+      "invite": "Un párrafo basta si lo saboreas en silencio."
+    },
+    {
+      "author": "Diádoco de Fotice",
+      "work": "Cien capítulos gnósticos",
+      "section": "caps. 61–80: pureza y humildad",
+      "invite": "Lee como quien escucha a un padre anciano."
+    },
+    {
+      "author": "Juan Casiano",
+      "work": "Conferencias (eco en la Filocalia)",
+      "section": "sobre la discreción",
+      "invite": "Deja que el texto te lleve a pedir misericordia."
+    },
+    {
+      "author": "Juan Casiano",
+      "work": "Conferencias (eco en la Filocalia)",
+      "section": "oración continua",
+      "invite": "Si te distraes, vuelve con mansedumbre al hilo de la lectura."
+    },
+    {
+      "author": "Marcos el Asceta",
+      "work": "Sobre la ley espiritual",
+      "section": "obras y gracia",
+      "invite": "Guarda en el corazón una idea sencilla para el día."
+    },
+    {
+      "author": "Marcos el Asceta",
+      "work": "Sobre los que piensan justificarse por las obras",
+      "section": "humildad ante Dios",
+      "invite": "Léelo despacio; quédate con una frase y llévala a la oración."
+    },
+    {
+      "author": "Marcos el Asceta",
+      "work": "Carta a Nicolás",
+      "section": "guarda de los sentidos",
+      "invite": "Lee un poco y vuelve a la Oración de Jesús con más paz."
+    },
+    {
+      "author": "Hesiquio de Batos",
+      "work": "Sobre la sobriedad y la vigilancia",
+      "section": "nipsis y Oración de Jesús",
+      "invite": "No busques acabar: busca prestar atención."
+    },
+    {
+      "author": "Hesiquio de Batos",
+      "work": "Sobre la sobriedad y la vigilancia",
+      "section": "atención unida al Nombre",
+      "invite": "Un párrafo basta si lo saboreas en silencio."
+    },
+    {
+      "author": "Hesiquio de Batos",
+      "work": "Sobre la sobriedad y la vigilancia",
+      "section": "contra la imaginación vana",
+      "invite": "Lee como quien escucha a un padre anciano."
+    },
+    {
+      "author": "Nilo / Evagrio",
+      "work": "Consejos sobre la oración",
+      "section": "simplicidad de la petición",
+      "invite": "Deja que el texto te lleve a pedir misericordia."
+    },
+    {
+      "author": "Máximo el Confesor",
+      "work": "Capítulos sobre el amor",
+      "section": "Centuria I: amor al prójimo",
+      "invite": "Si te distraes, vuelve con mansedumbre al hilo de la lectura."
+    },
+    {
+      "author": "Máximo el Confesor",
+      "work": "Capítulos sobre el amor",
+      "section": "Centuria II: pasiones y libertad",
+      "invite": "Guarda en el corazón una idea sencilla para el día."
+    },
+    {
+      "author": "Máximo el Confesor",
+      "work": "Capítulos sobre el amor",
+      "section": "Centuria III: conocimiento y humildad",
+      "invite": "Léelo despacio; quédate con una frase y llévala a la oración."
+    },
+    {
+      "author": "Máximo el Confesor",
+      "work": "Capítulos sobre el amor",
+      "section": "Centuria IV: unión con Dios",
+      "invite": "Lee un poco y vuelve a la Oración de Jesús con más paz."
+    },
+    {
+      "author": "Máximo el Confesor",
+      "work": "Capítulos teológicos y económicos",
+      "section": "sobre la Encarnación y la oración",
+      "invite": "No busques acabar: busca prestar atención."
+    },
+    {
+      "author": "Talasio el Africano",
+      "work": "Sobre el amor, la continencia y la vida según el intelecto",
+      "section": "primera centuria",
+      "invite": "Un párrafo basta si lo saboreas en silencio."
+    },
+    {
+      "author": "Talasio el Africano",
+      "work": "Sobre el amor, la continencia y la vida según el intelecto",
+      "section": "segunda centuria",
+      "invite": "Lee como quien escucha a un padre anciano."
+    },
+    {
+      "author": "Juan de Carpatos",
+      "work": "Consejos a los monjes de la India",
+      "section": "consuelo en la sequedad",
+      "invite": "Deja que el texto te lleve a pedir misericordia."
+    },
+    {
+      "author": "Juan de Carpatos",
+      "work": "Cien textos de consolación",
+      "section": "esperanza en la tentación",
+      "invite": "Si te distraes, vuelve con mansedumbre al hilo de la lectura."
+    },
+    {
+      "author": "Teodoro de Edessa",
+      "work": "Textos teóricos",
+      "section": "purificación de la mente",
+      "invite": "Guarda en el corazón una idea sencilla para el día."
+    },
+    {
+      "author": "Máximo de Cáris",
+      "work": "Capítulos sobre el amor (tradición)",
+      "section": "mansedumbre",
+      "invite": "Léelo despacio; quédate con una frase y llévala a la oración."
+    },
+    {
+      "author": "Filoteo del Sinaí",
+      "work": "Cuarenta textos sobre la sobriedad",
+      "section": "guarda de la mente",
+      "invite": "Lee un poco y vuelve a la Oración de Jesús con más paz."
+    },
+    {
+      "author": "Filoteo del Sinaí",
+      "work": "Cuarenta textos sobre la sobriedad",
+      "section": "respiración y Nombre de Jesús",
+      "invite": "No busques acabar: busca prestar atención."
+    },
+    {
+      "author": "Elías Ecdico",
+      "work": "Florilegio gnóstico",
+      "section": "palabras breves sobre la virtud",
+      "invite": "Un párrafo basta si lo saboreas en silencio."
+    },
+    {
+      "author": "Teófano el Monje",
+      "work": "Escala de las virtudes divinas",
+      "section": "peldaños de la vigilante oración",
+      "invite": "Lee como quien escucha a un padre anciano."
+    },
+    {
+      "author": "Pedro Damasceno",
+      "work": "Libro I: advertencias",
+      "section": "temor de Dios y acción de gracias",
+      "invite": "Deja que el texto te lleve a pedir misericordia."
+    },
+    {
+      "author": "Pedro Damasceno",
+      "work": "Libro I: advertencias",
+      "section": "lectura de la Escritura con lágrimas",
+      "invite": "Si te distraes, vuelve con mansedumbre al hilo de la lectura."
+    },
+    {
+      "author": "Pedro Damasceno",
+      "work": "Libro II: veinticuatro discursos",
+      "section": "discurso sobre la humildad",
+      "invite": "Guarda en el corazón una idea sencilla para el día."
+    },
+    {
+      "author": "Pedro Damasceno",
+      "work": "Libro II: veinticuatro discursos",
+      "section": "discurso sobre el amor",
+      "invite": "Léelo despacio; quédate con una frase y llévala a la oración."
+    },
+    {
+      "author": "Simeón Metafrastes",
+      "work": "Paráfrasis de Macario",
+      "section": "el alma que busca a Dios",
+      "invite": "Lee un poco y vuelve a la Oración de Jesús con más paz."
+    },
+    {
+      "author": "Simeón el Nuevo Teólogo",
+      "work": "Capítulos prácticos y teológicos",
+      "section": "luz divina y arrepentimiento",
+      "invite": "No busques acabar: busca prestar atención."
+    },
+    {
+      "author": "Simeón el Nuevo Teólogo",
+      "work": "Capítulos prácticos y teológicos",
+      "section": "lágrimas de conversión",
+      "invite": "Un párrafo basta si lo saboreas en silencio."
+    },
+    {
+      "author": "Simeón el Nuevo Teólogo",
+      "work": "Himnos del amor divino (selección breve)",
+      "section": "asombro ante la misericordia",
+      "invite": "Lee como quien escucha a un padre anciano."
+    },
+    {
+      "author": "Nicetas Stethatos",
+      "work": "Centurias",
+      "section": "primera: práctica",
+      "invite": "Deja que el texto te lleve a pedir misericordia."
+    },
+    {
+      "author": "Nicetas Stethatos",
+      "work": "Centurias",
+      "section": "segunda: naturaleza",
+      "invite": "Si te distraes, vuelve con mansedumbre al hilo de la lectura."
+    },
+    {
+      "author": "Nicetas Stethatos",
+      "work": "Centurias",
+      "section": "tercera: teología contemplativa",
+      "invite": "Guarda en el corazón una idea sencilla para el día."
+    },
+    {
+      "author": "Teolipto de Filadelfia",
+      "work": "Sobre la vida oculta en Cristo",
+      "section": "oración en el corazón",
+      "invite": "Léelo despacio; quédate con una frase y llévala a la oración."
+    },
+    {
+      "author": "Gregorio del Sinaí",
+      "work": "Sobre el silencio y la oración",
+      "section": "cómo comenzar la Oración de Jesús",
+      "invite": "Lee un poco y vuelve a la Oración de Jesús con más paz."
+    },
+    {
+      "author": "Gregorio del Sinaí",
+      "work": "Sobre el silencio y la oración",
+      "section": "postura, respiración y atención",
+      "invite": "No busques acabar: busca prestar atención."
+    },
+    {
+      "author": "Gregorio del Sinaí",
+      "work": "Capítulos diversos",
+      "section": "errores de los principiantes",
+      "invite": "Un párrafo basta si lo saboreas en silencio."
+    },
+    {
+      "author": "Nilo de Sora / tradición hesicasta",
+      "work": "Tradición del Nombre",
+      "section": "invocar a Jesús con fe sencilla",
+      "invite": "Lee como quien escucha a un padre anciano."
+    },
+    {
+      "author": "Calisto e Ignacio Xanthópulos",
+      "work": "Dirección para la vida hesicasta",
+      "section": "regla de principiantes",
+      "invite": "Deja que el texto te lleve a pedir misericordia."
+    },
+    {
+      "author": "Calisto e Ignacio Xanthópulos",
+      "work": "Dirección para la vida hesicasta",
+      "section": "sobriedad durante el trabajo",
+      "invite": "Si te distraes, vuelve con mansedumbre al hilo de la lectura."
+    },
+    {
+      "author": "Calisto el Patriarca",
+      "work": "Textos sobre la oración",
+      "section": "oración y lágrimas",
+      "invite": "Guarda en el corazón una idea sencilla para el día."
+    },
+    {
+      "author": "Gregorio Palamas",
+      "work": "A favor de los santos hesicastas",
+      "section": "el corazón y la luz increada (idea central)",
+      "invite": "Léelo despacio; quédate con una frase y llévala a la oración."
+    },
+    {
+      "author": "Gregorio Palamas",
+      "work": "Homilías / capítulos (tradición filocálica)",
+      "section": "oración que desciende a la mente en el corazón",
+      "invite": "Lee un poco y vuelve a la Oración de Jesús con más paz."
+    },
+    {
+      "author": "Isaías el Solitario",
+      "work": "Textos ascéticos",
+      "section": "guarda de los sentidos",
+      "invite": "No busques acabar: busca prestar atención."
+    },
+    {
+      "author": "Marcos el Asceta",
+      "work": "Sobre el bautismo",
+      "section": "gracia ya dada y cooperación",
+      "invite": "Un párrafo basta si lo saboreas en silencio."
+    },
+    {
+      "author": "Evagrio Póntico",
+      "work": "Sobre los pensamientos",
+      "section": "identificar el pensamiento antes de pelear",
+      "invite": "Lee como quien escucha a un padre anciano."
+    },
+    {
+      "author": "Antonio el Grande",
+      "work": "Dichos (Apotegmas / eco filocálico)",
+      "section": "«Hoy me levantaré» — empezar de nuevo",
+      "invite": "Deja que el texto te lleve a pedir misericordia."
+    },
+    {
+      "author": "Macario el Egipcio",
+      "work": "Homilías (tradición)",
+      "section": "el fuego interior de la caridad",
+      "invite": "Si te distraes, vuelve con mansedumbre al hilo de la lectura."
+    },
+    {
+      "author": "Diádoco de Fotice",
+      "work": "Cien capítulos gnósticos",
+      "section": "caps. 81–100: amor perfecto",
+      "invite": "Guarda en el corazón una idea sencilla para el día."
+    },
+    {
+      "author": "Hesiquio de Batos",
+      "work": "Sobre la sobriedad",
+      "section": "cada respiración con el Nombre",
+      "invite": "Léelo despacio; quédate con una frase y llévala a la oración."
+    },
+    {
+      "author": "Máximo el Confesor",
+      "work": "Ascética",
+      "section": "señorío sobre la ira",
+      "invite": "Lee un poco y vuelve a la Oración de Jesús con más paz."
+    },
+    {
+      "author": "Máximo el Confesor",
+      "work": "Ascética",
+      "section": "perdón y oración por los enemigos",
+      "invite": "No busques acabar: busca prestar atención."
+    },
+    {
+      "author": "Pedro Damasceno",
+      "work": "Advertencias",
+      "section": "pobreza voluntaria del corazón",
+      "invite": "Un párrafo basta si lo saboreas en silencio."
+    },
+    {
+      "author": "Simeón el Nuevo Teólogo",
+      "work": "Catequesis (eco)",
+      "section": "no desesperar tras la caída",
+      "invite": "Lee como quien escucha a un padre anciano."
+    },
+    {
+      "author": "Gregorio del Sinaí",
+      "work": "Sobre la quietud",
+      "section": "silencio exterior e interior",
+      "invite": "Deja que el texto te lleve a pedir misericordia."
+    },
+    {
+      "author": "Calisto e Ignacio Xanthópulos",
+      "work": "Dirección hesicasta",
+      "section": "medida en el ayuno y el sueño",
+      "invite": "Si te distraes, vuelve con mansedumbre al hilo de la lectura."
+    },
+    {
+      "author": "Gregorio Palamas",
+      "work": "Tradición hesicasta",
+      "section": "el cuerpo también ora",
+      "invite": "Guarda en el corazón una idea sencilla para el día."
+    },
+    {
+      "author": "Filoteo del Sinaí",
+      "work": "Sobriedad",
+      "section": "corta el pensamiento en la puerta del corazón",
+      "invite": "Léelo despacio; quédate con una frase y llévala a la oración."
+    },
+    {
+      "author": "Juan de Carpatos",
+      "work": "Consolaciones",
+      "section": "cuando la oración se siente seca",
+      "invite": "Lee un poco y vuelve a la Oración de Jesús con más paz."
+    },
+    {
+      "author": "Talasio",
+      "work": "Sobre el amor",
+      "section": "dominio de la lengua",
+      "invite": "No busques acabar: busca prestar atención."
+    },
+    {
+      "author": "Evagrio Póntico",
+      "work": "Sobre la oración",
+      "section": "oración sin imágenes",
+      "invite": "Un párrafo basta si lo saboreas en silencio."
+    },
+    {
+      "author": "Macario",
+      "work": "Homilías (tradición)",
+      "section": "humildad como tierra buena",
+      "invite": "Lee como quien escucha a un padre anciano."
+    },
+    {
+      "author": "Diádoco",
+      "work": "Capítulos gnósticos",
+      "section": "gusto espiritual y engaño",
+      "invite": "Deja que el texto te lleve a pedir misericordia."
+    },
+    {
+      "author": "Hesiquio",
+      "work": "Sobriedad",
+      "section": "memoria de la muerte con esperanza",
+      "invite": "Si te distraes, vuelve con mansedumbre al hilo de la lectura."
+    },
+    {
+      "author": "Máximo el Confesor",
+      "work": "Capítulos sobre el amor",
+      "section": "ver a Cristo en el hermano",
+      "invite": "Guarda en el corazón una idea sencilla para el día."
+    },
+    {
+      "author": "Pedro Damasceno",
+      "work": "Discursos",
+      "section": "acción de gracias en todo",
+      "invite": "Léelo despacio; quédate con una frase y llévala a la oración."
+    },
+    {
+      "author": "Simeón el Nuevo Teólogo",
+      "work": "Capítulos",
+      "section": "conocer a Dios por la experiencia limpia",
+      "invite": "Lee un poco y vuelve a la Oración de Jesús con más paz."
+    },
+    {
+      "author": "Gregorio del Sinaí",
+      "work": "Capítulos",
+      "section": "perseverar un poco cada día",
+      "invite": "No busques acabar: busca prestar atención."
+    },
+    {
+      "author": "Palamas",
+      "work": "Hesicasmo",
+      "section": "la mente que baja al corazón",
+      "invite": "Un párrafo basta si lo saboreas en silencio."
+    },
+    {
+      "author": "Xanthópulos",
+      "work": "Dirección",
+      "section": "obediencia sencilla y consejo de un padre",
+      "invite": "Lee como quien escucha a un padre anciano."
+    },
+    {
+      "author": "Evagrio",
+      "work": "Praktikos",
+      "section": "trabajar con las manos y orar",
+      "invite": "Deja que el texto te lleve a pedir misericordia."
+    },
+    {
+      "author": "Antonio",
+      "work": "Dichos",
+      "section": "celda / lugar habitual de oración",
+      "invite": "Si te distraes, vuelve con mansedumbre al hilo de la lectura."
+    },
+    {
+      "author": "Marcos el Asceta",
+      "work": "Ley espiritual",
+      "section": "no medir a los demás",
+      "invite": "Guarda en el corazón una idea sencilla para el día."
+    },
+    {
+      "author": "Isaías el Solitario",
+      "work": "Ascética",
+      "section": "paciencia en la enfermedad y el cansancio",
+      "invite": "Léelo despacio; quédate con una frase y llévala a la oración."
+    },
+    {
+      "author": "Teófano / tradición",
+      "work": "Oración del corazón",
+      "section": "una sola palabra: Jesús",
+      "invite": "Lee un poco y vuelve a la Oración de Jesús con más paz."
+    }
+  ]
+}

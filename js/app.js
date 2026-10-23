@@ -5,8 +5,9 @@ const PR = (id) => getPrayer(id, S.settings.lang, S.settings.texts || 'vatican')
 import * as R from './rule.js';
 import * as Store from './store.js';
 import { buildIcs } from './ics.js';
+import * as Daily from './daily.js';
 
-const VERSION = '0.2.1';
+const VERSION = '0.2.2';
 let S = Store.load();
 let tab = 'today';
 const $ = (s, r = document) => r.querySelector(s);
@@ -315,6 +316,32 @@ function introCard(open = false) {
     <p class="mt-3 leading-relaxed opacity-80">${t.intro}</p>
     <p class="text-xs opacity-55 mt-3">${t.introSrc}: <a class="underline" href="${SOURCE_URL}" target="_blank" rel="noopener">orthodoxchurchsheffield.com</a></p></details>`;
 }
+
+function rankLabel(rank) {
+  const t = T();
+  return ({ solemnity: t.rankSolemnity, feast: t.rankFeast, memorial: t.rankMemorial, optional: t.rankOptional })[rank] || '';
+}
+function dailyCard(d = today()) {
+  const t = T(), saint = Daily.saintOf(d), phil = Daily.philokaliaOf(d);
+  if (!saint && !phil) return '';
+  const rank = saint ? (saint.feast || rankLabel(saint.rank)) : '';
+  return `<section class="rounded-3xl bg-base-100 px-5 py-4 mb-6 border border-base-300/80" aria-label="${h(t.saintOfDay)}">
+    ${saint ? `<div class="mb-3">
+      <p class="text-xs uppercase tracking-wider opacity-50 font-semibold">${h(t.saintOfDay)}</p>
+      <p class="mt-1 text-lg font-medium leading-snug">${h(saint.name)}</p>
+      ${rank ? `<p class="text-sm opacity-55 mt-0.5">${h(rank)}</p>` : ''}
+    </div>` : ''}
+    ${saint && phil ? '<div class="border-t border-base-300 my-3"></div>' : ''}
+    ${phil ? `<div>
+      <p class="text-xs uppercase tracking-wider opacity-50 font-semibold">${h(t.philokaliaTitle)}</p>
+      <p class="mt-1 text-[1.05rem] font-medium leading-snug">${h(phil.author)}</p>
+      <p class="text-sm opacity-70 mt-0.5 leading-snug">${h(phil.work)} · ${h(phil.section)}</p>
+      <p class="mt-2 text-sm leading-relaxed opacity-80 italic">${h(phil.invite)}</p>
+      <p class="text-xs opacity-40 mt-2">${h(t.philokaliaAttr)}</p>
+    </div>` : ''}
+  </section>`;
+}
+
 function viewToday() {
   const t = T(), now = today(), d = D.ymd(now), list = todaysItems(now);
   const doneN = list.filter((it) => entry(d, it.id)?.done).length;
@@ -334,6 +361,7 @@ function viewToday() {
   const dateStr = L() === 'es' ? `${t.weekdays[now.getDay()]}, ${now.getDate()} de ${t.months[now.getMonth()]}` : `${t.weekdays[now.getDay()]}, ${t.months[now.getMonth()]} ${now.getDate()}`;
   return `
     <header class="mb-6"><p class="text-sm opacity-55 uppercase tracking-wider">${h(dateStr)}</p><h1 class="text-4xl font-bold tracking-tight mt-1">${t.tabToday}</h1></header>
+    ${dailyCard(now)}
     ${y ? `<section class="rounded-3xl bg-primary/8 border border-primary/15 px-5 py-4 mb-6"><p class="text-xs uppercase tracking-wider text-primary font-semibold">${t.yesterdayProposito}</p><p class="mt-1 text-lg leading-snug">${h(y)}</p></section>` : ''}
     ${S.template === 'serafin' ? introCard() : ''}
     <section class="flex items-center gap-6 mb-6">
@@ -561,6 +589,12 @@ if (!SHOT && new URLSearchParams(location.search).has('smoke')) {
   addEventListener('error', (e) => window.__smoke.push('ERR window: ' + e.message));
   const step = (name, fn) => { try { fn(); window.__smoke.push('ok ' + name); } catch (e) { window.__smoke.push('ERR ' + name + ': ' + e.message); } };
   const tapN = (sel, n) => { for (let i = 0; i < n; i++) $(sel).click(); };
+  step('daily saint+philokalia', () => {
+    const s = Daily.saintOf(today()), p = Daily.philokaliaOf(today());
+    if (!s?.name || !p?.author) throw new Error('daily missing');
+    tab = 'today'; render();
+    if (!$('#view').textContent.includes(s.name.split(',')[0].slice(0, 12))) throw new Error('saint not rendered');
+  });
   step('default template is serafin', () => { if (S.template !== 'serafin' || !S.items.some((i) => i.id === 's_manana')) throw new Error(S.template); });
   for (const lang of ['es', 'en']) {
     S.settings.lang = lang;

@@ -1,4 +1,4 @@
-# Plan de Vida · v0.2
+# Plan de Vida · v0.2.2
 
 App personal, sencilla y silenciosa para vivir una **regla de oración**. Desde la v0.2 el plan por defecto es la **Regla de San Serafín de Sarov**, en español. Funciona **sin internet**, sin cuentas y sin servidor: todo queda en tu teléfono.
 
@@ -15,7 +15,7 @@ Nota: la página fuente **no** habla de una oración a la Madre de Dios «antes 
 El **Examen de la noche** (gracias, luz, repaso, pedir perdón y propósito) **no forma parte de la regla de san Serafín**. Es un añadido opcional que puedes desactivar en Ajustes → Mi plan.
 
 ## Cómo se usa
-- **Hoy**: tres bloques (Mañana, Durante el día, Noche), un anillo de progreso y un único botón «Siguiente».
+- **Hoy**: santo del día (calendario católico fijo) y puntero de lectura de la Filocalia; tres bloques (Mañana, Durante el día, Noche), un anillo de progreso y un único botón «Siguiente».
   - **Regla de la mañana / al acostarse**: un flujo paso a paso. Cada oración aparece en letra grande. Toca el texto (o «+1») para contar (●○○ 1/3). Al completar las repeticiones pasa sola a la siguiente oración. Al terminar, el bloque queda marcado.
   - **Oración de Jesús** y **Santísima Madre de Dios**: un contador tipo *chotki* / *komboskini*. Tocas un círculo grande, la meta se configura (100 por defecto, en Ajustes → Mi plan) y hay botones −1 y Reiniciar (con Deshacer). La vibración suave puede sonar cada 10, 33 o 100 cuentas. En Android funciona; Safari en iPhone no permite vibrar.
 - **Examen de la noche**: 5 pasos. El propósito aparece a la mañana siguiente en «Hoy».
@@ -70,6 +70,22 @@ En inglés (modo EN) los textos vienen de la [OCA](https://www.oca.org/orthodoxy
 
 La plantilla católica conserva sus textos de la v0.1: Ofrecimiento, Ángelus, Regina Coeli, Avemaría, Padrenuestro, Gloria y Acordaos.
 
+
+## Santo del día y Filocalia (v0.2.2)
+
+En **Hoy** aparecen dos bloques silenciosos, sin red:
+
+### Santo del día (católico)
+- Calendario **Romano General** de fiestas **fijas** (mes-día), con nombres en español.
+- Días sin memoria propia del calendario general muestran un nombre breve del **Martirologio** (orientativo).
+- Fuente de los datos: hechos públicos del Calendario Romano General (post-1969) y del Martirologio Romano; embebidos en `data/saints.json` / `js/data-saints.js` para uso offline. **No es el Ordo oficial** de una diócesis concreta.
+- **Limitación v1:** no se calculan fiestas **móviles** (Pascua, Ascensión, Pentecostés, Corpus Christi, Sagrado Corazón, etc.) ni traslados cuando caen en domingo. Epifanía aparece en la fecha fija universal (6 de enero).
+
+### Lectura de la Filocalia (puntero)
+- Cada día del año apunta a un **autor**, una **obra/volumen** y una **sección o tema** de la tradición de la Filocalia / Padres del desierto, más una frase breve de invitación en español **original** de la app.
+- **No** se reproducen citas sustanciales de ediciones modernas protegidas (p. ej. Palmer / Sherrard / Ware ni traducciones españolas comerciales). Lee el pasaje en tu propia edición.
+- Ciclo de ~90 entradas indexado por día del año (módulo); datos en `data/philokalia.json` / `js/data-philokalia.js`.
+
 ## Instalar en el teléfono
 La app debe abrirse desde una dirección **https** (GitHub Pages, Netlify o Cloudflare Pages). Basta subir esta carpeta tal cual, no hay que compilar nada.
 - **iPhone (Safari)**: Compartir → **«Añadir a pantalla de inicio»**.
@@ -103,6 +119,7 @@ npm run shots -- 8790      # capturas 390×844 en screenshots/
 ```
 Estructura:
 - `js/dates.js`: fechas;
+- `js/daily.js`: santo del día + puntero de Filocalia (datos en `js/data-*.js` y `data/*.json`);
 - `js/rule.js`: flujo, contador y plantillas;
 - `js/store.js`: plantillas y datos;
 - `js/prayers.js`: textos y fuentes;
