@@ -1,4 +1,4 @@
-# Plan de Vida · v0.2.3
+# Plan de Vida · v0.2.4
 
 App personal, sencilla y silenciosa para vivir una **regla de oración**. Desde la v0.2 el plan por defecto es la **Regla de San Serafín de Sarov**, en español. Funciona **sin internet**, sin cuentas y sin servidor: todo queda en tu teléfono.
 
@@ -130,3 +130,18 @@ Estructura:
 - `js/ics.js`: exportación al calendario;
 - `js/app.js`: interfaz;
 - `sw.js`: funcionamiento offline.
+
+## Inner Quest + Coué (v0.2.4)
+
+Cuatro tarjetas diarias dentro de la Regla de San Serafín (no es otra app). Cada una va **después** de su bloque de oración en **Hoy**:
+
+| Momento | Tras | id | ES / EN | min · XP |
+|---|---|---|---|---|
+| Mañana | Regla de la mañana | `iq-coue-space` | Coué + espacio / Coué + space | 12 · +30 |
+| Mañana | Coué + espacio | `iq-move-breathe` | Mover y respirar / Move & breathe | 10 · +20 |
+| Durante el día | Oración de Jesús | `iq-kind-intention` | Una intención amable / A kind intention (nota opcional: «Hoy cuidaré…») | 2 · +15 |
+| Noche | Regla al acostarse | `iq-coue-close` | Coué + cierre / Coué + close (los domingos añade «Una cosa que debo decir pronto — y a quién») | 7 · +25 |
+
+- Encima del anillo, una tarjeta discreta: **Inner Quest · día N/52** (día 1 = 29 oct 2026), **n/4 quests** y XP del día.
+- **Migración:** al abrir la app, una vez (`migrations: ['iq1']`), se añaden las cuatro tarjetas que falten a un plan Serafín existente, justo después de su ancla. No se toca historial, contadores, exámenes ni ediciones. Si borras una tarjeta, no vuelve. Con la plantilla católica activa, se añaden al plan Serafín guardado.
+- Las copias JSON importadas pasan por la misma migración.

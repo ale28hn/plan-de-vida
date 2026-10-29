@@ -1,6 +1,6 @@
 import * as D from '../js/dates.js';
 import * as R from '../js/rule.js';
-import { seedSerafin, SEEDS } from '../js/store.js';
+import { seedSerafin, SEEDS, migrate } from '../js/store.js';
 import { PRAYERS, getPrayer, VATICAN_ES } from '../js/prayers.js';
 let pass = 0, fail = 0;
 const eq = (name, got, exp) => { const ok = JSON.stringify(got) === JSON.stringify(exp); ok ? pass++ : fail++; console.log(`${ok ? '✓' : '✗'} ${name}${ok ? '' : `  got ${JSON.stringify(got)} expected ${JSON.stringify(exp)}`}`); };
@@ -47,11 +47,23 @@ eq('consistency flexible done', D.consistency(wk, P('2026-10-11'), doneSet(['202
 eq('mondayOf Sunday', D.ymd(D.mondayOf(P('2026-10-11'))), '2026-10-05');
 // --- Regla de San Serafín: structure exactly as source page ---
 const sf = seedSerafin();
-eq('serafin blocks', sf.map((i) => [i.key, i.slot]), [['s_manana', 'morning'], ['s_dia', 'day'], ['s_cena', 'night'], ['s_acostarse', 'night'], ['s_examen', 'night']]);
+const sfRule = sf.filter((i) => !i.iq);
+eq('serafin blocks', sfRule.map((i) => [i.key, i.slot]), [['s_manana', 'morning'], ['s_dia', 'day'], ['s_cena', 'night'], ['s_acostarse', 'night'], ['s_examen', 'night']]);
 eq('morning rule = PN×3, Theotokos×3, Credo×1', R.SERAFIN_RULE.map((x) => `${x.prayer}×${x.count}`), ['o_padrenuestro×3', 'o_theotokos×3', 'o_credo×1']);
-eq('bedtime rule repeats morning rule', sf[3].steps, sf[0].steps);
-eq('day counter is Jesus Prayer', sf[1].counterPrayer, 'o_jesus');
-eq('after supper counter is Theotokos', sf[2].counterPrayer, 'o_theotokos_salva');
+eq('bedtime rule repeats morning rule', sfRule[3].steps, sfRule[0].steps);
+eq('day counter is Jesus Prayer', sfRule[1].counterPrayer, 'o_jesus');
+eq('after supper counter is Theotokos', sfRule[2].counterPrayer, 'o_theotokos_salva');
+// --- Inner Quest + Coué (v0.2.4): each card sits after its prayer block ---
+eq('serafin order with inner quest', sf.map((i) => i.id), ['s_manana', 'iq-coue-space', 'iq-move-breathe', 's_dia', 'iq-kind-intention', 's_cena', 's_acostarse', 'iq-coue-close', 's_examen']);
+eq('iq slots', sf.filter((i) => i.iq).map((i) => i.slot), ['morning', 'morning', 'day', 'night']);
+const legacy = { version: 1, template: 'serafin', items: sfRule.map((i) => ({ ...i, name: i.id === 's_dia' ? 'Mi oración' : null })), log: { '2026-10-28': { s_dia: { done: true, count: 100 } } }, examen: { '2026-10-28': { proposito: 'p' } }, settings: {} };
+const mig = migrate(JSON.parse(JSON.stringify(legacy)));
+eq('migration adds 4 iq items in order', mig.items.map((i) => i.id), sf.map((i) => i.id));
+eq('migration keeps history, examen and edits', [mig.log, mig.examen, mig.items.find((i) => i.id === 's_dia').name], [legacy.log, legacy.examen, 'Mi oración']);
+mig.items = mig.items.filter((i) => i.id !== 'iq-kind-intention');
+eq('migration runs once (deleted item stays deleted)', migrate(mig).items.some((i) => i.id === 'iq-kind-intention'), false);
+const cat = migrate({ template: 'catolico', items: [{ id: 'rosario' }], savedPlans: { serafin: sfRule }, log: {} });
+eq('catolico user: iq added to saved serafin plan only', [cat.items.length, cat.savedPlans.serafin.filter((i) => i.iq).length], [1, 4]);
 eq('Creed ES without filioque', /procede del Padre(?! y del Hijo)/.test(PRAYERS.o_credo.es.b) && !/y del Hijo, que/.test(PRAYERS.o_credo.es.b), true);
 eq('Creed EN without filioque', !/and the Son,? Who with/.test(PRAYERS.o_credo.en.b.replace('Who with the Father and the Son', '')), true);
 eq('every Orthodox text has a URL source', Object.entries(PRAYERS).filter(([k]) => k.startsWith('o_')).every(([, v]) => v.es.src?.url && v.en.src?.url), true);

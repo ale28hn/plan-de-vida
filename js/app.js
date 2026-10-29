@@ -7,7 +7,7 @@ import * as Store from './store.js';
 import { buildIcs } from './ics.js';
 import * as Daily from './daily.js';
 
-const VERSION = '0.2.3';
+const VERSION = '0.2.4';
 let S = Store.load();
 let tab = 'today';
 const $ = (s, r = document) => r.querySelector(s);
@@ -28,8 +28,19 @@ function itemName(it, d = today()) {
 }
 function itemDesc(it, d = today()) {
   if (it.desc != null) return it.desc;
-  const k = isRC(it, d) ? 'reginacoeli' : it.key;
-  return ITEMS[L()][k]?.[1] || '';
+  const k = isRC(it, d) ? 'reginacoeli' : it.key, row = ITEMS[L()][k];
+  return [row?.[1] || '', d.getDay() === 0 && row?.[2]].filter(Boolean).join(' '); // [2] = Sunday-only line
+}
+// ---------- Inner Quest ----------
+const iqToday = (list) => list.filter((it) => it.iq);
+function iqCard(list, d) {
+  const iq = iqToday(list); if (!iq.length) return '';
+  const t = T(), ds = D.ymd(d), n = D.dayDiff(D.parseYmd(Store.IQ_START), d) + 1;
+  const done = iq.filter((it) => entry(ds, it.id)?.done), xp = done.reduce((a, it) => a + (it.xp || 0), 0), xpAll = iq.reduce((a, it) => a + (it.xp || 0), 0);
+  const day = n >= 1 && n <= Store.IQ_DAYS ? ` · ${t.iqDay(n, Store.IQ_DAYS)}` : '';
+  return `<section class="rounded-3xl bg-base-100 px-5 py-3 mb-6 flex items-center justify-between gap-3" data-iq-card aria-label="${h(t.iqTitle)}">
+    <div class="min-w-0"><p class="text-xs uppercase tracking-wider text-primary font-semibold">✦ ${h(t.iqTitle)}${h(day)}</p><p class="text-xs opacity-55 mt-0.5 leading-snug">${h(t.iqNote)}</p></div>
+    <div class="shrink-0" style="text-align:right"><p class="font-semibold tabular-nums" data-iq-count>${h(t.iqQuests(done.length, iq.length))}</p>${xpAll ? `<p class="text-xs opacity-55 tabular-nums">${xp}/${xpAll} XP</p>` : ''}</div></section>`;
 }
 const itemPrayer = (it, d = today()) => (it.prayer === 'angelus' && D.isEasterSeason(d) ? 'reginacoeli' : it.prayer);
 const entry = (date, id) => S.log[date]?.[id];
@@ -164,7 +175,7 @@ function openItem(id) {
   openSheet(`
     <p class="text-sm opacity-60">${h(t.slots[it.slot])}${it.minutes ? ` · ${it.minutes} ${t.minutes}` : ''}</p>
     <h2 class="text-2xl font-semibold tracking-tight mt-1">${h(itemName(it))}</h2>
-    <p class="opacity-70 mt-1">${h(itemDesc(it))}</p>
+    <p class="opacity-70 mt-1 leading-relaxed">${h(itemDesc(it))}</p>${it.xp ? `<p class="text-xs text-primary font-semibold mt-1">✦ +${it.xp} XP</p>` : ''}
     ${pid ? `<button class="btn btn-ghost btn-sm rounded-full mt-3 -ml-2 text-primary" data-prayer="${pid}">${t.viewPrayer} →</button>` : ''}
     ${it.minutes ? `<div class="flex flex-col items-center my-6">
       <div class="relative w-40 h-40"><svg viewBox="0 0 120 120" class="w-40 h-40 -rotate-90"><circle cx="60" cy="60" r="54" class="fill-none stroke-base-300" stroke-width="6"/>
@@ -173,7 +184,7 @@ function openItem(id) {
       <div id="timer-btns" class="flex gap-2 mt-4"></div></div>` : ''}
     <div class="space-y-3 mt-4">
       ${it.minutes ? `<label class="block"><span class="text-sm opacity-70">${t.minutesDone}</span><input id="f-min" type="number" inputmode="numeric" min="0" max="600" class="input input-lg w-full rounded-2xl mt-1" value="${h(e.minutes ?? '')}" placeholder="${it.minutes}"></label>` : ''}
-      <label class="block"><span class="text-sm opacity-70">${t.note}</span><textarea id="f-note" rows="2" class="textarea w-full rounded-2xl mt-1 text-base">${h(e.note || '')}</textarea></label>
+      <label class="block"><span class="text-sm opacity-70">${t.note}</span><textarea id="f-note" rows="2" class="textarea w-full rounded-2xl mt-1 text-base" placeholder="${it.id === 'iq-kind-intention' ? h(t.iqNotePh) : ''}">${h(e.note || '')}</textarea></label>
     </div>
     <div class="modal-action flex-wrap">
       <button class="btn btn-ghost rounded-full" data-close>${t.close}</button>
@@ -363,7 +374,8 @@ function viewToday() {
         <span class="w-7 h-7 rounded-full border-2 grid place-items-center transition ${done ? 'bg-primary border-primary text-primary-content' : 'border-base-content/25'}">${done ? '<svg viewBox="0 0 24 24" class="w-4 h-4" fill="none" stroke="currentColor" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"><path d="M5 12.5l4.5 4.5L19 7.5"/></svg>' : ''}</span></button>
       <button class="flex-1 text-left py-2 min-h-12" data-open="${it.id}">
         <span class="block text-[1.07rem] font-medium leading-snug ${done ? 'opacity-45' : ''}">${h(itemName(it, now))}</span>
-        ${meta ? `<span class="block text-sm opacity-55 mt-0.5">${h(meta)}</span>` : ''}</button></li>`;
+        ${it.iq ? `<span class="block text-sm mt-0.5 leading-snug ${done ? 'opacity-40' : 'opacity-70'}">${h(itemDesc(it, now))}</span>` : ''}
+        ${meta ? `<span class="block text-sm opacity-55 mt-0.5">${h(meta)}${it.iq && it.xp ? ` · <span class="text-primary font-semibold">+${it.xp} XP</span>` : ''}</span>` : ''}</button></li>`;
   };
   const dateStr = L() === 'es' ? `${t.weekdays[now.getDay()]}, ${now.getDate()} de ${t.months[now.getMonth()]}` : `${t.weekdays[now.getDay()]}, ${t.months[now.getMonth()]} ${now.getDate()}`;
   return `
@@ -371,6 +383,7 @@ function viewToday() {
     ${dailyCard(now)}
     ${y ? `<section class="rounded-3xl bg-primary/8 border border-primary/15 px-5 py-4 mb-6"><p class="text-xs uppercase tracking-wider text-primary font-semibold">${t.yesterdayProposito}</p><p class="mt-1 text-lg leading-snug">${h(y)}</p></section>` : ''}
     ${S.template === 'serafin' ? introCard() : ''}
+    ${iqCard(list, now)}
     <section class="flex items-center gap-6 mb-6">
       <div class="relative shrink-0">${ring(doneN, list.length)}<div class="absolute inset-0 grid place-items-center text-center"><div><div class="text-3xl font-semibold tabular-nums">${doneN}<span class="opacity-40 text-xl">/${list.length}</span></div></div></div></div>
       <div class="flex-1 min-w-0">${nx
@@ -556,7 +569,7 @@ document.addEventListener('change', (ev) => {
   const el = ev.target;
   if (el.dataset.enable) { const it = S.items.find((x) => x.id === el.dataset.enable); it.enabled = el.checked; persist(); render(); }
   if ('import' in el.dataset && el.files[0]) el.files[0].text().then((txt) => {
-    try { const obj = JSON.parse(txt); if (!Store.validate(obj)) throw 0; S = obj; persist(); render(); toast(T().imported); } catch { toast(T().importError); }
+    try { const obj = JSON.parse(txt); if (!Store.validate(obj)) throw 0; S = Store.migrate(obj); persist(); render(); toast(T().imported); } catch { toast(T().importError); }
   });
 });
 
@@ -603,8 +616,27 @@ if (!SHOT && new URLSearchParams(location.search).has('smoke')) {
     if (!$('#view').textContent.includes(s.name.split(',')[0].slice(0, 12))) throw new Error('saint not rendered');
   });
   step('default template is serafin', () => { if (S.template !== 'serafin' || !S.items.some((i) => i.id === 's_manana')) throw new Error(S.template); });
+  step('inner quest: 4 cards after their prayer blocks', () => {
+    tab = 'today'; render();
+    const ids = [...document.querySelectorAll('#view [data-toggle]')].map((b) => b.dataset.toggle);
+    const after = (a, b) => ids.indexOf(b) === ids.indexOf(a) + 1;
+    if (!Store.IQ_IDS.every((id) => ids.includes(id))) throw new Error('missing ' + ids.join(','));
+    if (!after('s_manana', 'iq-coue-space') || !after('iq-coue-space', 'iq-move-breathe') || !after('s_dia', 'iq-kind-intention') || !after('s_acostarse', 'iq-coue-close')) throw new Error('order ' + ids.join(','));
+    if (!$('[data-iq-card]')) throw new Error('iq card');
+  });
+  step('inner quest: sunday line only on sunday', () => {
+    const it = S.items.find((i) => i.id === 'iq-coue-close'), sun = D.parseYmd('2026-11-01'), mon = D.parseYmd('2026-11-02');
+    if (!itemDesc(it, sun).includes('Domingo') || itemDesc(it, mon).includes('Domingo')) throw new Error('sunday');
+  });
   for (const lang of ['es', 'en']) {
     S.settings.lang = lang;
+    step(`${lang}/inner quest names`, () => { const it = S.items.find((i) => i.id === 'iq-coue-space'); if (itemName(it) !== (lang === 'es' ? 'Coué + espacio' : 'Coué + space')) throw new Error(itemName(it)); });
+    step(`${lang}/inner quest mark`, () => {
+      tab = 'today'; render(); const d0 = D.ymd(today()); $('[data-toggle="iq-move-breathe"]').click();
+      if (!entry(d0, 'iq-move-breathe')?.done || !/^1\/4/.test($('[data-iq-count]').textContent)) throw new Error('mark ' + $('[data-iq-count]').textContent);
+      $('#undo').click(); openItem('iq-kind-intention'); $('#f-note').value = 'x'; $('[data-done]').click();
+      if (entry(d0, 'iq-kind-intention')?.note !== 'x') throw new Error('note'); $('#undo').click();
+    });
     for (const tb of ['today', 'week', 'prayers', 'settings']) step(`${lang}/${tb}`, () => { tab = tb; render(); });
     tab = 'today'; render();
     step(`${lang}/toggle+undo`, () => { $('[data-toggle]').click(); $('#undo').click(); });

@@ -48,6 +48,7 @@ export const STR = {
     introTitle: 'Regla de San Serafín de Sarov',
     intro: 'Regla breve de san Serafín de Sarov (†1833) para quienes viven ocupados con el trabajo: al levantarse, el Padre Nuestro tres veces, «Madre de Dios, Virgen, regocíjate» (en Occidente, el Ave María) tres veces y el Símbolo de la Fe una vez; durante el trabajo o de viaje, la Oración de Jesús (o «Señor, ten piedad» si hay gente cerca) hasta la cena; después de la cena, «Santísima Madre de Dios, sálvame a mí pecador» hasta dormirse; y al acostarse, otra vez la regla de la mañana y la señal de la Cruz.',
     introSrc: 'Según «Prayer Rule of St Seraphim for daily use», Orthodox Church Sheffield', bead: 'cuenta', of: 'de',
+    iqTitle: 'Inner Quest', iqDay: (n, of) => `día ${n}/${of}`, iqQuests: (n, of) => `${n}/${of} quests`, iqNote: 'Coué + práctica diaria, dentro de la regla: cada tarjeta va después de su bloque de oración.', iqNotePh: 'Hoy cuidaré…',
   },
   en: {
     textsTitle: 'Texts', textsVatican: 'Vatican (Catholic)', textsOrthodox: 'Orthodox', textsNote: 'The structure follows St Seraphim\'s rule. "Vatican" uses the official Spanish texts from vatican.va; "Orthodox" uses Orthodox prayer books. (English always shows the Orthodox English texts.)',
@@ -98,6 +99,7 @@ export const STR = {
     introTitle: 'Rule of St. Seraphim of Sarov',
     intro: 'A short rule from St. Seraphim of Sarov (+1833) for those pressed by work: on rising, the Our Father three times, "Rejoice, O Virgin Theotokos" three times and the Creed once; during work or travel, the Jesus Prayer (or "Lord, have mercy" if others are near) until supper; after supper, "Most Holy Mother of God, save me a sinner" until falling asleep; and going to bed, the morning rule again and the sign of the Cross.',
     introSrc: 'Per "Prayer Rule of St Seraphim for daily use", Orthodox Church Sheffield', bead: 'count', of: 'of',
+    iqTitle: 'Inner Quest', iqDay: (n, of) => `day ${n}/${of}`, iqQuests: (n, of) => `${n}/${of} quests`, iqNote: 'Coué + daily practice, inside the rule: each card follows its prayer block.', iqNotePh: 'Today I will care for…',
   },
 };
 
@@ -109,6 +111,10 @@ export const ITEMS = {
     s_cena: ['Santísima Madre de Dios', 'Después de la cena, terminadas las tareas, hasta dormirse.'],
     s_acostarse: ['Regla al acostarse', 'De nuevo la regla de la mañana; luego la señal de la Cruz.'],
     s_examen: ['Examen de la noche', 'Breve: dar gracias, pedir perdón y un propósito.'],
+    'iq-coue-space': ['Coué + espacio', 'Hecho cuando: (1) digas 20 veces, sin esfuerzo: «Cada día, en todos los aspectos, estoy cada vez mejor.» (2) dejes el teléfono fuera de la vista 10 minutos y despejes un metro de mesa (o la silla donde trabajas).'],
+    'iq-move-breathe': ['Mover y respirar', '5 respiraciones lentas (nariz–boca) y 5 minutos de caminata o estiramiento suave.'],
+    'iq-kind-intention': ['Una intención amable', 'Escribe una sola frase: «Hoy cuidaré ___». Léela una vez al mediodía.'],
+    'iq-coue-close': ['Coué + cierre', 'Después de las oraciones: (1) Coué ×20. (2) Contesta en una línea: «¿Qué solté hoy?»', 'Domingo: «Una cosa que debo decir pronto — y a quién».'],
     ofrecimiento: ['Ofrecimiento de obras', 'Al despertar, ofrecer a Dios todo el día. ¡Serviam!'],
     oracion_m: ['Oración mental', 'Rato de diálogo personal con Dios.'],
     misa: ['Santa Misa y Comunión', 'El centro y la raíz del día.'],
@@ -130,6 +136,10 @@ export const ITEMS = {
     s_cena: ['Most Holy Mother of God', 'After supper, tasks completed, until falling asleep.'],
     s_acostarse: ['Rule at bedtime', 'The morning rule again; then the sign of the Cross.'],
     s_examen: ['Evening examen', 'Brief: thanks, asking forgiveness, and a resolution.'],
+    'iq-coue-space': ['Coué + space', 'Done when: (1) you say 20 times, without effort: “Day by day, in every way, I am getting better and better.” (2) your phone is out of sight for 10 minutes and you clear one meter of desk (or your work chair).'],
+    'iq-move-breathe': ['Move & breathe', '5 slow breaths (nose–mouth) and 5 minutes of walking or gentle stretching.'],
+    'iq-kind-intention': ['A kind intention', 'Write one line: “Today I will care for ___.” Read it once at midday.'],
+    'iq-coue-close': ['Coué + close', 'After prayers: (1) Coué ×20. (2) Answer in one line: “What did I release today?”', 'Sunday: “One thing I need to say soon — and to whom.”'],
     ofrecimiento: ['Morning offering', 'On waking, offer the whole day to God. Serviam!'],
     oracion_m: ['Mental prayer', 'Personal conversation with God.'],
     misa: ['Holy Mass and Communion', 'The center and root of the day.'],
